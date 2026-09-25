@@ -237,14 +237,6 @@ nav a:hover::after{transform:scaleX(1);}
 }
 .btn-ghost-hero:hover{background:#FFFFFF;color:var(--navy);}
 
-.scroll-cue{
-  position:absolute;bottom:2.2rem;left:0;right:0;margin:0 auto;width:fit-content;z-index:5;
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:rgba(250,246,236,.55);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;
-  opacity:0;animation:fadeUp .6s ease forwards 2s;
-}
-.scroll-bar{width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollA 2.2s ease-in-out infinite;}
-@keyframes scrollA{0%,100%{opacity:.3;transform:scaleY(1) translateY(0);}60%{opacity:1;transform:scaleY(.6) translateY(5px);}}
 
 /* ─── INFO STRIP ─── */
 .info-strip{
@@ -955,11 +947,6 @@ footer{background:var(--navy);border-top:1px solid rgba(213,191,136,.15);}
     <div class="hero-btns">
       <a href="https://www.opentable.com/r/zenita-reservations-san-antonio?restref=1500463&lang=en-US&ot_source=Restaurant%20website" class="btn-gold" target="_blank" rel="noopener">Reservations</a>
     </div>
-  </div>
-
-  <div class="scroll-cue">
-    <span>Scroll</span>
-    <div class="scroll-bar"></div>
   </div>
 </section>
 
