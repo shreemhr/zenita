@@ -189,25 +189,26 @@ nav a:hover::after{transform:scaleX(1);}
 }
 
 .hero-schedule{
-  display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;
-  margin-bottom:2.6rem;
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;
+  gap:0;margin-bottom:2.6rem;
   opacity:0;animation:fadeUp .7s ease forwards 1.3s;
 }
 .hero-schedule-col{
-  padding:0 2.2rem;text-align:center;
-  border-left:1px solid rgba(255,255,255,.25);
+  display:flex;flex-direction:column;justify-content:center;
+  min-width:190px;padding:0 2.4rem;text-align:center;
+  border-left:1px solid rgba(213,191,136,.3);
 }
 .hero-schedule-col:first-child{border-left:none;}
 .hs-title{
-  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold);font-weight:600;margin-bottom:.55rem;
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:.65rem;
 }
 .hs-line{
-  font-size:.82rem;color:rgba(250,246,236,.85);line-height:1.7;font-weight:300;
+  font-size:.82rem;color:rgba(250,246,236,.8);line-height:1.75;font-weight:300;
 }
 @media(max-width:700px){
-  .hero-schedule{flex-direction:column;align-items:center;gap:1.2rem;}
-  .hero-schedule-col{border-left:none;padding:0;}
+  .hero-schedule{flex-direction:column;align-items:center;gap:1.6rem;}
+  .hero-schedule-col{border-left:none;padding:0;min-width:0;}
 }
 
 .hero-btns{
@@ -952,7 +953,6 @@ footer{background:var(--navy);border-top:1px solid rgba(213,191,136,.15);}
     </div>
 
     <div class="hero-btns">
-      <a href="https://zenitarooftop.com/menu/" class="btn-ghost-hero">View Menu</a>
       <a href="https://www.opentable.com/r/zenita-reservations-san-antonio?restref=1500463&lang=en-US&ot_source=Restaurant%20website" class="btn-gold" target="_blank" rel="noopener">Reservations</a>
     </div>
   </div>
@@ -1288,8 +1288,6 @@ footer{background:var(--navy);border-top:1px solid rgba(213,191,136,.15);}
       <li><a href="#">Mon – Thu | 4 PM – 10 PM</a></li>
       <li><a href="#">Fri – Sat | 4 PM – 12 AM</a></li>
       <li><a href="#">Sun | 5 PM – 10 PM</a></li>
-      <li style="margin-top:.6rem;"><a href="#">In-Room Dining</a></li>
-      <li><a href="#">Available 24 hours</a></li>
     </ul></div>
     <div class="foot-col"><h4>Contact</h4>
       <address>211 E. Commerce St.<br>San Antonio, TX 78205<br><br>
