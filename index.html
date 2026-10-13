@@ -265,6 +265,22 @@ nav a:hover::after{transform:scaleX(1);}
 .scroll-bar{width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollA 2.2s ease-in-out infinite;}
 @keyframes scrollA{0%,100%{opacity:.3;transform:scaleY(1) translateY(0);}60%{opacity:1;transform:scaleY(.6) translateY(5px);}}
 
+/* ─── VIDEO ─── */
+.video-section{background:var(--navy);padding:6.5rem 0;position:relative;overflow:hidden;text-align:center;}
+.video-section::before{
+  content:'';position:absolute;left:0;right:0;top:0;height:1px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:.3;
+}
+.video-section .eyebrow{justify-content:center;color:var(--gold-l);}
+.video-section .eyebrow::after{background:var(--gold-l);}
+.video-section .sec-title{color:var(--cream);text-align:center;}
+.video-section .sec-title em{color:var(--rust);}
+.video-wrap{
+  max-width:900px;margin:3rem auto 0;position:relative;padding-top:50.625%;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);border:1px solid rgba(213,191,136,.25);
+}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
 
 /* ─── INFO STRIP ─── */
 .info-strip{
@@ -980,6 +996,17 @@ footer{background:var(--navy);border-top:1px solid rgba(213,191,136,.15);}
   <div class="scroll-cue">
     <span>Scroll</span>
     <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section" id="video">
+  <div class="wrap">
+    <p class="eyebrow">Watch the Experience</p>
+    <h2 class="sec-title">Step Inside <em>Zenita</em></h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/PbJe7rIm4nE" title="Zenita Rooftop Restaurant &amp; Bar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
   </div>
 </section>
 
