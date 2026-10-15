@@ -150,7 +150,7 @@ nav a:hover::after{transform:scaleX(1);}
 
 .hero-content{
   position:relative;z-index:5;text-align:center;
-  padding:0 2rem;max-width:900px;
+  padding:0 2rem;max-width:1100px;
   display:flex;flex-direction:column;align-items:center;
 }
 .hero-logo{
@@ -192,22 +192,22 @@ nav a:hover::after{transform:scaleX(1);}
 }
 
 .hero-schedule{
-  display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));
-  column-gap:0;row-gap:1.2rem;max-width:760px;margin:0 auto 1.8rem;
+  display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+  column-gap:0;row-gap:1.2rem;max-width:1040px;margin:0 auto 1.8rem;
   opacity:0;animation:fadeUp .7s ease forwards 1.3s;
 }
 .hero-schedule-col{
   display:flex;flex-direction:column;justify-content:center;
-  padding:0 1.6rem;text-align:center;
+  padding:0 1rem;text-align:center;
   border-left:1px solid rgba(213,191,136,.3);
 }
-.hero-schedule-col:nth-child(3n+1){border-left:none;}
+.hero-schedule-col:first-child{border-left:none;}
 .hs-title{
-  font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;
   color:var(--gold);font-weight:600;margin-bottom:.5rem;
 }
 .hs-line{
-  font-size:.78rem;color:rgba(250,246,236,.8);line-height:1.6;font-weight:300;
+  font-size:.74rem;color:rgba(250,246,236,.8);line-height:1.55;font-weight:300;
 }
 @media(max-width:700px){
   .hero-schedule{grid-template-columns:1fr;row-gap:1.1rem;max-width:300px;margin-bottom:1.4rem;}
