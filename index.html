@@ -82,6 +82,10 @@ nav a:hover::after{transform:scaleX(1);}
 }
 
 .nav-dropdown{position:relative;display:flex;align-items:center;}
+.nav-dropdown::after{
+  content:'';position:absolute;left:50%;transform:translateX(-50%);
+  top:100%;width:240px;height:1.3rem;
+}
 .nav-dropdown-trigger{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;}
 .nav-dropdown-caret{
   display:inline-block;width:0;height:0;
@@ -1442,6 +1446,10 @@ footer{background:var(--navy);border-top:1px solid rgba(213,191,136,.15);}
       <li><a href="#private">Private Events</a></li>
       <li><a href="#chef">Meet the Chef</a></li>
       <li><a href="https://aztechotelriverwalk.com/" target="_blank">Aztec Hotel</a></li>
+      <li style="margin-top:.6rem;"><a href="#" style="color:var(--gold);">Holiday Events</a></li>
+      <li><a href="events/nye/index.html">Noche de Oro — NYE</a></li>
+      <li><a href="events/christmas-luxe/index.html">Christmas Luxe</a></li>
+      <li><a href="events/mesa-de-gracias/index.html">Mesa de Gracias</a></li>
     </ul></div>
     <div class="foot-col"><h4>Hours</h4><ul>
       <li><a href="#" style="color:var(--gold);">Breakfast</a></li>
