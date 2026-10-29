@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Christmas Luxe | Christmas at Zenita Rooftop, San Antonio</title>
+<meta name="description" content="Christmas 2026 at Zenita Rooftop in San Antonio: Christmas Luxe, a Latin-Asian-Mexican holiday buffet on Christmas Eve and Christmas Day. Choose your seating and book on OpenTable.">
+<meta property="og:title" content="Christmas Luxe | Christmas at Zenita Rooftop">
+<meta property="og:description" content="Nochebuena dinner on Dec 24, plus lunch and dinner on Christmas Day. Choose your seating and book on OpenTable.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+/* Layout: night-sky hero with string lights → three-seating switch → three seat cards per seating → menu + good-to-know */
+:root{
+  --bg:#F5F2EE; --surface:#FFFFFF; --ink:#1F1B1A; --muted:#675C57; --line:#E2D9D2;
+  --cranberry:#A3233A; --cranberry-ink:#FFFFFF; --pine:#1E4D3F; --gold:#C9962E;
+  --hero-a:#0F2620; --hero-b:#1B3B31; --hero-c:#5A1A27; --hero-ink:#FBF4EA;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141211; --surface:#1F1B19; --ink:#F2EAE3; --muted:#B5A79E; --line:#382F2B;
+  --cranberry:#E25A70; --cranberry-ink:#141211; --pine:#7BC2A8; --gold:#E2B456; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#141211; --surface:#1F1B19; --ink:#F2EAE3; --muted:#B5A79E; --line:#382F2B;
+  --cranberry:#E25A70; --cranberry-ink:#141211; --pine:#7BC2A8; --gold:#E2B456; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+
+.hero{background:linear-gradient(170deg,var(--hero-a) 0%,var(--hero-b) 55%,var(--hero-c) 100%);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero .wrap{padding-block:64px 60px;position:relative;z-index:1;display:grid;gap:18px}
+.lights{position:absolute;inset:0 0 auto 0;height:70px;pointer-events:none}
+.lights svg{width:100%;height:100%}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02}
+.hero p.lede{max-width:58ch;font-size:1.08rem;margin:0;opacity:.95}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-weight:500}
+.facts span{display:inline-flex;gap:8px;align-items:center}
+.facts span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+main .wrap{padding-block:40px 24px;display:grid;gap:28px}
+.switch{display:flex;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px;justify-self:start;flex-wrap:wrap}
+.switch button{font:inherit;font-weight:600;border:0;background:transparent;color:var(--muted);padding:10px 18px;border-radius:999px;cursor:pointer}
+.switch button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.switch button:focus-visible,.book:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.panel{display:grid;gap:18px}
+.seating-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 20px}
+.seating-head h2{font-size:clamp(1.8rem,4vw,2.4rem)}
+.seating-head .when{color:var(--muted);font-weight:500}
+.seating-intro{margin:0;max-width:70ch;color:var(--muted)}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;grid-template-rows:auto auto 1fr auto;gap:14px;min-width:0}
+.card .eyebrow{color:var(--pine)}
+.card h3{font-size:1.55rem;line-height:1.15}
+.card p{margin:0;color:var(--muted)}
+.card .foot{display:grid;gap:14px}
+.prices{list-style:none;margin:0;padding:12px 0 0;border-top:1px dashed var(--line);display:grid;gap:4px;font-variant-numeric:tabular-nums}
+.prices li{display:flex;justify-content:space-between;gap:12px}
+.prices li b{font-weight:700}
+.prices li.small{color:var(--muted);font-size:.9rem}
+.book{display:block;text-align:center;text-decoration:none;font-weight:700;background:var(--cranberry);color:var(--cranberry-ink);padding:13px 16px;border-radius:10px;transition:filter .15s}
+.book:hover{filter:brightness(1.08)}
+.card.featured{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+
+.menu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:start;padding-top:20px;border-top:1px solid var(--line)}
+@media (max-width:760px){.menu{grid-template-columns:1fr}}
+.menu h2{font-size:2rem}
+.menu .eyebrow{color:var(--cranberry)}
+.dishes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
+@media (max-width:520px){.dishes{grid-template-columns:1fr}}
+.dishes h4{margin:0 0 4px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pine)}
+.dishes ul{margin:0;padding-left:18px}
+.addons{display:flex;flex-wrap:wrap;gap:8px}
+.addons span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:.92rem}
+.fine{display:grid;gap:8px;color:var(--muted);font-size:.92rem;padding-block:20px 48px;border-top:1px solid var(--line)}
+.fine p{margin:0;max-width:82ch}
+.fine a{color:var(--cranberry);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="lights" aria-hidden="true">
+    <svg viewBox="0 0 1200 70" preserveAspectRatio="none">
+      <path d="M0 10 Q150 60 300 18 T600 18 T900 18 T1200 10" fill="none" stroke="#FBF4EA" stroke-opacity=".35" stroke-width="1.5"/>
+      <g fill="#E8B85A">
+        <circle cx="60" cy="27" r="4"/><circle cx="150" cy="37" r="4" fill="#E25A70"/><circle cx="240" cy="27" r="4"/><circle cx="360" cy="24" r="4" fill="#7BC2A8"/><circle cx="450" cy="36" r="4"/><circle cx="540" cy="24" r="4" fill="#E25A70"/><circle cx="660" cy="24" r="4"/><circle cx="750" cy="36" r="4" fill="#7BC2A8"/><circle cx="840" cy="24" r="4"/><circle cx="960" cy="24" r="4" fill="#E25A70"/><circle cx="1050" cy="35" r="4"/><circle cx="1140" cy="20" r="4" fill="#7BC2A8"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="eyebrow">Zenita Rooftop · San Antonio</div>
+    <h1>Christmas Luxe</h1>
+    <p class="lede">Chef's Latin–Asian–Mexican holiday buffet on the rooftop. Chef-attended carving stations, live birria bao, a dessert table led by churro bread pudding, and live music. Pick your seating and your table below.</p>
+    <div class="facts">
+      <span>Christmas Eve · Thu, Dec 24</span>
+      <span>Christmas Day · Fri, Dec 25</span>
+      <span>Table held for 2 hours</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="switch" role="tablist" aria-label="Choose a seating">
+      <button role="tab" id="tab-eve" aria-selected="true" aria-controls="eve">Christmas Eve Dinner</button>
+      <button role="tab" id="tab-lunch" aria-selected="false" aria-controls="lunch">Christmas Day Lunch</button>
+      <button role="tab" id="tab-dinner" aria-selected="false" aria-controls="dinner">Christmas Day Dinner</button>
+    </div>
+
+    <section id="eve" class="panel" role="tabpanel" aria-labelledby="tab-eve">
+      <div class="seating-head"><h2>Nochebuena Christmas Eve Dinner</h2><div class="when">Thu, Dec 24 · Seatings 5:00 – 7:30 pm</div></div>
+      <p class="seating-intro">Start with a glass of cava, then visit the iced seafood display and two chef-attended carving stations. A strolling mariachi plays villancicos from 6 to 8 pm, with a ponche toast at 7 pm.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="eyebrow">Dining room or heated terrace</div><h3>Christmas Eve Buffet</h3>
+          <p>The full Christmas Luxe buffet. Seating is assigned by the restaurant in the dining room or on the heated terrace. Parties of 1 to 8.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$145</b></li><li><span>Child (5–12)</span><b>$49</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839847" href="#">Book Christmas Eve Buffet</a></div>
+        </article>
+        <article class="card featured">
+          <div class="eyebrow">Front row on the city</div><h3>Skyline Seats</h3>
+          <p>Seats on the Skyline Rail or Parapet, the rooftop's front row. Two guests per table.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$170</b></li><li><span>Child (5–12)</span><b>$74</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839853" href="#">Book Skyline Seats</a></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Private VIP table · 5–8 guests</div><h3>Family Table</h3>
+          <p>A private VIP table for your group of 5 to 8, booked as a whole table.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$145</b></li><li><span>Child (5–12)</span><b>$49</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839862" href="#">Book Family Table</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="lunch" class="panel" role="tabpanel" aria-labelledby="tab-lunch" hidden>
+      <div class="seating-head"><h2>Christmas Day Lunch</h2><div class="when">Fri, Dec 25 · Seatings 11:00 am – 1:30 pm</div></div>
+      <p class="seating-intro">Start with a pomegranate mimosa, then head to the carving stations, live birria bao and the kids' corner. Santa visits the terrace from 11:30 am to 1:30 pm for family photos.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="eyebrow">Dining room or heated terrace</div><h3>Christmas Day Lunch Buffet</h3>
+          <p>The full Christmas Luxe buffet. Seating is assigned by the restaurant in the dining room or on the heated terrace. Parties of 1 to 8.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$115</b></li><li><span>Child (5–12)</span><b>$49</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839864" href="#">Book Lunch Buffet</a></div>
+        </article>
+        <article class="card featured">
+          <div class="eyebrow">Front row on the city</div><h3>Skyline Seats</h3>
+          <p>Seats on the Skyline Rail or Parapet, the rooftop's front row. Two guests per table.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$140</b></li><li><span>Child (5–12)</span><b>$74</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839871" href="#">Book Skyline Seats</a></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Private VIP table · 5–8 guests</div><h3>Family Table</h3>
+          <p>A private VIP table for your group of 5 to 8, booked as a whole table.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$115</b></li><li><span>Child (5–12)</span><b>$49</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839874" href="#">Book Family Table</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="dinner" class="panel" role="tabpanel" aria-labelledby="tab-dinner" hidden>
+      <div class="seating-head"><h2>Christmas Day Dinner</h2><div class="when">Fri, Dec 25 · Seatings 5:00 – 7:30 pm</div></div>
+      <p class="seating-intro">End Christmas Day by candlelight. Start with a glass of cava, then the iced seafood display, carving stations and miso butter sea bass, with a live jazz and bolero trio.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="eyebrow">Dining room or heated terrace</div><h3>Christmas Day Dinner Buffet</h3>
+          <p>The full Christmas Luxe buffet. Seating is assigned by the restaurant in the dining room or on the heated terrace. Parties of 1 to 8.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$135</b></li><li><span>Child (5–12)</span><b>$49</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839880" href="#">Book Dinner Buffet</a></div>
+        </article>
+        <article class="card featured">
+          <div class="eyebrow">Front row on the city</div><h3>Skyline Seats</h3>
+          <p>Seats on the Skyline Rail or Parapet, the rooftop's front row. Two guests per table.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$160</b></li><li><span>Child (5–12)</span><b>$74</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839884" href="#">Book Skyline Seats</a></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Private VIP table · 5–8 guests</div><h3>Family Table</h3>
+          <p>A private VIP table for your group of 5 to 8, booked as a whole table.</p>
+          <div class="foot"><ul class="prices"><li><span>Adult (13+)</span><b>$135</b></li><li><span>Child (5–12)</span><b>$49</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+          <a class="book" data-id="839886" href="#">Book Family Table</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu" aria-labelledby="menu-h">
+      <div style="display:grid;gap:8px">
+        <div class="eyebrow">On the buffet</div>
+        <h2 id="menu-h">The Christmas Luxe menu</h2>
+        <p style="margin:0;color:var(--muted)">Highlights across the three seatings. The iced seafood display and sea bass are served at the dinners.</p>
+      </div>
+      <div class="dishes">
+        <div><h4>Carving stations</h4><ul><li>Chile-rubbed prime rib with miso bordelaise</li><li>Adobo-honey pork belly porchetta</li></ul></div>
+        <div><h4>From the sea</h4><ul><li>Ahi tuna tiradito</li><li>Shrimp cocktail shooters</li><li>Miso butter sea bass</li></ul></div>
+        <div><h4>Live station</h4><ul><li>Birria bao</li></ul></div>
+        <div><h4>Plant-based & kids</h4><ul><li>Vegan tamales</li><li>A kids' corner on the buffet</li></ul></div>
+        <div><h4>Dessert table</h4><ul><li>Churro bread pudding</li><li>Abuelita chocolate pots de crème</li><li>Pomegranate pavlova bites</li></ul></div>
+        <div><h4>Add when you book (21+)</h4><div class="addons"><span>Holiday Wine Flight · $32</span><span>Ponche Navideño · $16</span><span>Bottomless Pomegranate Mimosas · $35 (lunch)</span></div></div>
+      </div>
+    </section>
+
+    <section class="fine" aria-label="Good to know">
+      <p><strong style="color:var(--ink)">Good to know.</strong> Count every guest in your reservation, including children under 5. Prices are per person and exclude 8.25% sales tax and a 20% service charge. Payment is due at the restaurant.</p>
+      <p>Please cancel by Monday, December 21, 2026 at 11:00 am if your plans change. Alcohol is served to guests 21 and over with valid ID. For parties of 9 or more, contact our events team.</p>
+      <p>Prime rib is served medium-rare and the tuna tiradito is raw. Consuming raw or undercooked meats or seafood may increase your risk of foodborne illness.</p>
+      <p>Prefer to browse everything at Zenita? <a href="https://www.opentable.com/r/zenita-san-antonio#experiences" target="_blank" rel="noopener">See Zenita on OpenTable</a>.</p>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  var base = 'https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=';
+  var utm = '&utm_source=website&utm_medium=referral&utm_campaign=christmas-luxe';
+  document.querySelectorAll('.book').forEach(function(a){
+    a.href = base + a.dataset.id + utm;
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role=tab]'));
+  function show(name){
+    tabs.forEach(function(t){
+      var id = t.getAttribute('aria-controls'), on = id === name;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      document.getElementById(id).hidden = !on;
+    });
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ var id=t.getAttribute('aria-controls'); show(id); history.replaceState(null,'','#'+id); }); });
+  function fromHash(){ var h = location.hash.replace('#',''); if (['eve','lunch','dinner'].indexOf(h) > -1) show(h); }
+  window.addEventListener('hashchange', fromHash); fromHash();
+})();
+</script>
+</body>
+</html>

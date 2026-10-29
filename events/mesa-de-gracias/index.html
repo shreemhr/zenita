@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mesa de Gracias | Thanksgiving at Zenita Rooftop, San Antonio</title>
+<meta name="description" content="Thanksgiving 2026 at Zenita Rooftop in San Antonio: a Latin-Asian-Mexican Thanksgiving buffet with lunch and golden hour dinner seatings, Skyline Seats and private Family Tables. Book on OpenTable.">
+<meta property="og:title" content="Mesa de Gracias | Thanksgiving at Zenita Rooftop">
+<meta property="og:description" content="Lunch or Golden Hour Dinner on Thursday, November 26, 2026. Choose your seating and book on OpenTable.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+
+/* Layout: sunset hero band → seating switch (Lunch / Golden Hour Dinner) → three seating cards per seating → menu + fine print */
+:root{
+  --bg:#F6F1EC;          /* adobe plaster */
+  --surface:#FFFFFF;
+  --ink:#2A1E1A;         /* mole */
+  --muted:#6E5D55;
+  --line:#E4D9D0;
+  --chile:#A8321F;       /* guajillo red, primary accent */
+  --chile-ink:#FFFFFF;
+  --agave:#1F5A55;       /* agave teal, secondary */
+  --gold:#D99A2B;        /* golden hour */
+  --hero-a:#3A1F2B; --hero-b:#8A3A24; --hero-c:#D99A2B; --hero-ink:#FFF7EC;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1A1412; --surface:#241C19; --ink:#F3E9E1; --muted:#B8A79D; --line:#3A2E29;
+  --chile:#E0674E; --chile-ink:#1A1412; --agave:#6FB8AE; --gold:#E8B252;
+  --hero-a:#1F1118; --hero-b:#5E2617; --hero-c:#A86F18; --hero-ink:#FFF7EC; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#1A1412; --surface:#241C19; --ink:#F3E9E1; --muted:#B8A79D; --line:#3A2E29;
+  --chile:#E0674E; --chile-ink:#1A1412; --agave:#6FB8AE; --gold:#E8B252;
+  --hero-a:#1F1118; --hero-b:#5E2617; --hero-c:#A86F18; --hero-ink:#FFF7EC; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+
+/* Hero */
+.hero{background:linear-gradient(165deg,var(--hero-a) 0%,var(--hero-b) 62%,var(--hero-c) 100%);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero .wrap{padding-block:56px 64px;position:relative;z-index:1;display:grid;gap:18px}
+.hero .sun{position:absolute;right:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,214,140,.55) 0%,rgba(255,214,140,0) 68%);pointer-events:none}
+.hero .skyline{position:absolute;left:0;right:0;bottom:0;height:44px;opacity:.28}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02}
+.hero p.lede{max-width:56ch;font-size:1.08rem;margin:0;opacity:.95}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-weight:500}
+.facts span{display:inline-flex;gap:8px;align-items:center}
+.facts span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.notice{display:inline-block;justify-self:start;background:rgba(255,247,236,.14);border:1px solid rgba(255,247,236,.35);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.92rem}
+
+/* Seating switch */
+main .wrap{padding-block:40px 24px;display:grid;gap:28px}
+.switch{display:flex;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px;justify-self:start;flex-wrap:wrap}
+.switch button{font:inherit;font-weight:600;border:0;background:transparent;color:var(--muted);padding:10px 18px;border-radius:999px;cursor:pointer}
+.switch button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.switch button:focus-visible,.book:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.seating-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 20px}
+.seating-head h2{font-size:clamp(1.8rem,4vw,2.4rem)}
+.seating-head .when{color:var(--muted);font-weight:500}
+.seating-intro{margin:0;max-width:68ch;color:var(--muted)}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;grid-template-rows:auto auto 1fr auto;gap:14px;min-width:0}
+.card .eyebrow{color:var(--agave)}
+.card h3{font-size:1.55rem;line-height:1.15}
+.card p{margin:0;color:var(--muted)}
+.prices{list-style:none;margin:0;padding:12px 0 0;border-top:1px dashed var(--line);display:grid;gap:4px;font-variant-numeric:tabular-nums}
+.prices li{display:flex;justify-content:space-between;gap:12px}
+.prices li b{font-weight:700}
+.prices li.small{color:var(--muted);font-size:.9rem}
+.book{display:block;text-align:center;text-decoration:none;font-weight:700;background:var(--chile);color:var(--chile-ink);padding:13px 16px;border-radius:10px;transition:filter .15s}
+.book:hover{filter:brightness(1.08)}
+.book[aria-disabled="true"]{background:var(--line);color:var(--muted);pointer-events:none}
+.card.featured{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+
+/* Menu */
+.menu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:start;padding-top:20px;border-top:1px solid var(--line)}
+@media (max-width:760px){.menu{grid-template-columns:1fr}}
+.menu h2{font-size:2rem}
+.menu .eyebrow{color:var(--chile)}
+.dishes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
+@media (max-width:520px){.dishes{grid-template-columns:1fr}}
+.dishes h4{margin:0 0 4px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--agave)}
+.dishes ul{margin:0;padding-left:18px;color:var(--ink)}
+.fine{display:grid;gap:8px;color:var(--muted);font-size:.92rem;padding-block:20px 48px;border-top:1px solid var(--line)}
+.fine p{margin:0;max-width:80ch}
+.fine a{color:var(--chile);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <svg class="skyline" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true"><path fill="#000" d="M0 44V30h60v-8h40v8h30V14h24v16h50V22h36v-6h20v6h40v22h20V8h18v36h40V26h70v-8h30v8h60V18h28v-8h14v8h40v26h50V24h60v20h40V12h22v-6h10v6h20v32h60V28h50v-6h40v22h40V20h30v24h50V30h70v14z"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">Zenita Rooftop · San Antonio</div>
+    <h1>Mesa de Gracias</h1>
+    <p class="lede">A Latin–Asian–Mexican Thanksgiving buffet on the rooftop. Chef-carved turkey and smoked brisket, live music, and the city skyline. Choose your seating and your table below.</p>
+    <div class="facts">
+      <span>Thursday, November 26, 2026</span>
+      <span>Lunch or Golden Hour Dinner</span>
+      <span>Table held for 2 hours</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="switch" role="tablist" aria-label="Choose a seating">
+      <button role="tab" id="tab-lunch" aria-selected="true" aria-controls="lunch">Thanksgiving Lunch</button>
+      <button role="tab" id="tab-dinner" aria-selected="false" aria-controls="dinner">Golden Hour Dinner</button>
+    </div>
+
+    <section id="lunch" role="tabpanel" aria-labelledby="tab-lunch" style="display:grid;gap:18px">
+      <div class="seating-head">
+        <h2>Thanksgiving Lunch</h2>
+        <div class="when">Seatings 11:00 am – 1:30 pm</div>
+      </div>
+      <p class="seating-intro">Arrive to a Cranberry-Orange Mimosa or a zero-proof Jamaica spritz, then head to the buffet while live acoustic guitar plays.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="eyebrow">Dining room or heated terrace</div>
+          <h3>Lunch Buffet</h3>
+          <p>The full Mesa de Gracias buffet. Seating is assigned by the restaurant in the dining room or on the heated terrace.</p>
+          <div style="display:grid;gap:14px">
+            <ul class="prices"><li><span>Adult (13+)</span><b>$89</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+            <a class="book" data-id="839765" href="#">Book Lunch Buffet</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="eyebrow">Front row on the city</div>
+          <h3>Skyline Seats</h3>
+          <p>Seats on the Skyline Rail or Parapet, the rooftop's front row. Two guests per table.</p>
+          <div style="display:grid;gap:14px">
+            <ul class="prices"><li><span>Adult (13+)</span><b>$109</b></li><li><span>Child (5–12)</span><b>$59</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+            <a class="book" data-id="839770" href="#">Book Skyline Seats</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Private VIP table · 5–8 guests</div>
+          <h3>Family Table</h3>
+          <p>A private VIP table for your group of 5 to 8, booked as a whole table.</p>
+          <div style="display:grid;gap:14px">
+            <ul class="prices"><li><span>Adult (13+)</span><b>$89</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+            <a class="book" data-id="839771" href="#">Book Family Table</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="dinner" role="tabpanel" aria-labelledby="tab-dinner" hidden style="display:grid;gap:18px">
+      <div class="seating-head">
+        <h2>Golden Hour Dinner</h2>
+        <div class="when">Seatings 5:00 pm – 7:30 pm</div>
+      </div>
+      <p class="seating-intro">Start with a Chipotle-Cranberry Paloma or a zero-proof version as the sun sets over the city. A live trio plays through dinner.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="eyebrow">Dining room or heated terrace</div>
+          <h3>Golden Hour Dinner</h3>
+          <p>The full Mesa de Gracias buffet at sunset. Seating is assigned by the restaurant in the dining room or on the heated terrace.</p>
+          <div style="display:grid;gap:14px">
+            <ul class="prices"><li><span>Adult (13+)</span><b>$109</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+            <a class="book" data-id="839773" href="#">Book Golden Hour Dinner</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="eyebrow">Front row for the sunset</div>
+          <h3>Skyline Seats</h3>
+          <p>Seats on the Skyline Rail or Parapet, the rooftop's front row. Two guests per table.</p>
+          <div style="display:grid;gap:14px">
+            <ul class="prices"><li><span>Adult (13+)</span><b>$129</b></li><li><span>Child (5–12)</span><b>$59</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+            <a class="book" data-id="839778" href="#">Book Skyline Seats</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Private VIP table · 5–8 guests</div>
+          <h3>Family Table</h3>
+          <p>A private VIP table for your group of 5 to 8, booked as a whole table.</p>
+          <div style="display:grid;gap:14px">
+            <ul class="prices"><li><span>Adult (13+)</span><b>$109</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
+            <a class="book" data-id="839780" href="#">Book Family Table</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu" aria-labelledby="menu-h">
+      <div style="display:grid;gap:8px">
+        <div class="eyebrow">On the buffet</div>
+        <h2 id="menu-h">The Mesa de Gracias menu</h2>
+        <p style="margin:0;color:var(--muted)">Served at both lunch and dinner.</p>
+      </div>
+      <div class="dishes">
+        <div><h4>Carving station</h4><ul><li>Chile-Honey Turkey Roulade with mole glaze</li><li>Texas Smoked Brisket with Korean chile BBQ glaze</li></ul></div>
+        <div><h4>Sides</h4><ul><li>Elote sweet potato gratin</li><li>Miso garlic Brussels sprouts</li><li>Mexican fried rice</li><li>Street corn succotash</li><li>Napa and jicama salad</li></ul></div>
+        <div><h4>Plant-based</h4><ul><li>Roasted acorn squash main</li></ul></div>
+        <div><h4>Dessert table</h4><ul><li>Churro bread pudding</li><li>Matcha pumpkin tres leches</li></ul></div>
+        <div><h4>For the kids</h4><ul><li>A kids' corner on the buffet</li></ul></div>
+      </div>
+    </section>
+
+    <section class="fine" aria-label="Good to know">
+      <p><strong style="color:var(--ink)">Good to know.</strong> Count every guest in your reservation, including children under 5. Prices are per person and exclude 8.25% sales tax and a 20% service charge. Payment is due at the restaurant.</p>
+      <p>The menu includes sesame, soy, wheat, dairy, egg and tree nuts. Please note any allergies in your reservation. For parties of 9 or more, contact our events team.</p>
+      <p>Prefer to browse everything at Zenita? <a href="https://www.opentable.com/r/zenita-san-antonio#experiences" target="_blank" rel="noopener">See Zenita on OpenTable</a>.</p>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  var base = 'https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=';
+  var utm = '&utm_source=social&utm_medium=referral&utm_campaign=mesa-de-gracias';
+  document.querySelectorAll('.book').forEach(function(a){
+    a.href = base + a.dataset.id + utm;
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+
+  var tabs = [document.getElementById('tab-lunch'), document.getElementById('tab-dinner')];
+  function show(name){
+    tabs.forEach(function(t){
+      var on = t.getAttribute('aria-controls') === name;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.getAttribute('aria-controls')); history.replaceState(null,'','#'+t.getAttribute('aria-controls')); }); });
+  function fromHash(){ var h = location.hash.replace('#',''); if (h === 'lunch' || h === 'dinner') show(h); }
+  window.addEventListener('hashchange', fromHash); fromHash();
+})();
+</script>
+</body>
+</html>

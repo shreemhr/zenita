@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Noche de Oro | New Year’s Eve at Zenita Rooftop, San Antonio</title>
+<meta name="description" content="Ring in 2027 at Zenita Rooftop atop the Aztec Hotel: paired tasting dinners, live Latin jazz, a rooftop countdown and a DJ party with open bar until 2 AM.">
+<meta property="og:title" content="Noche de Oro: New Year’s Eve at Zenita Rooftop">
+<meta property="og:description" content="Paired tasting dinners, a rooftop countdown and a DJ party with open bar until 2 AM, atop the Aztec Hotel in downtown San Antonio.">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#14172E; --night2:#1C2142; --panel:#222851; --ink:#F1EBDC; --muted:#B4B6CC;
+  --gold:#E0BD68; --gold-deep:#B8923A; --line:#353C6B; --jade:#6DBFA7;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--night);color:var(--ink);font:400 17px/1.6 Jost,"Futura","Century Gothic","Avenir Next",system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
+img,video{max-width:100%;display:block}
+a{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2{font-family:Limelight,"Didot","Bodoni 72",Georgia,serif;font-weight:400;color:var(--gold);line-height:1.05;margin:0}
+h2{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:10px}
+h3{font-size:1.2rem;font-weight:600;margin:0}
+p.lead{color:var(--muted);max-width:60ch;margin:0 0 28px;font-size:1.05rem}
+section{padding:72px 0}
+.steps{height:14px;background:linear-gradient(135deg,var(--gold) 25%,transparent 25%) 0 0/14px 14px,linear-gradient(225deg,var(--gold) 25%,transparent 25%) 0 0/14px 14px;opacity:.5}
+.btn{display:inline-block;background:var(--gold);color:var(--night);text-decoration:none;font-weight:600;padding:13px 24px;border-radius:999px;border:2px solid var(--gold)}
+.btn:hover{background:#ECCD82}
+.btn.line{background:transparent;color:var(--gold)}
+.btn.line:hover{background:rgba(224,189,104,.12)}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:10;background:rgba(20,23,46,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.nav .brand{font-family:Limelight,Georgia,serif;color:var(--gold);text-decoration:none;font-size:1.25rem}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{color:var(--ink);text-decoration:none;font-size:.95rem}
+.nav ul a:hover{color:var(--gold)}
+.nav .btn{padding:8px 18px;font-size:.95rem}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--night2)}
+.hero img{width:100%;height:min(88vh,760px);object-fit:cover;object-position:50% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,23,46,.82) 0%,rgba(20,23,46,.35) 36%,rgba(20,23,46,0) 58%,rgba(20,23,46,.9) 100%)}
+.hero .copy{position:absolute;z-index:1;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:40px 0 34px}
+.hero h1{font-size:clamp(3.2rem,10vw,7rem);text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero .when{font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:500;margin:12px 0 6px}
+.hero .sub{max-width:44ch;margin:0;color:#E4DFD2}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:600px){.hero img{height:84vh;object-position:63% 40%}}
+
+/* Experiences */
+.xp{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:960px){.xp{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card.feature{border:2px solid var(--gold)}
+.card img{height:200px;width:100%;object-fit:cover}
+.card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card .time{color:var(--muted);margin:0}
+.card .price{margin:0;font-size:1rem;color:var(--muted)}
+.card .price b{font-size:2rem;font-weight:500;color:var(--ink)}
+.card ul{margin:0;padding-left:1.1rem;display:grid;gap:5px}
+.card .btn{margin-top:auto;align-self:flex-start}
+.tag{display:inline-block;align-self:flex-start;background:var(--gold);color:var(--night);font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:999px}
+
+/* Film */
+.film video{width:100%;aspect-ratio:16/9;border-radius:16px;border:1px solid var(--line);background:#000}
+
+/* Menu */
+.menus{display:grid;grid-template-columns:1fr 1.25fr;gap:22px;align-items:start}
+@media (max-width:900px){.menus{grid-template-columns:1fr}}
+.menu{background:var(--night2);border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px}
+.menu.veg{grid-column:1/-1}
+.vg{display:inline-block;font-size:.75rem;font-weight:600;color:var(--jade);border:1px solid var(--jade);border-radius:999px;padding:0 8px;margin-left:6px;vertical-align:2px}
+.menu h3{font-family:Limelight,Georgia,serif;font-weight:400;color:var(--gold);font-size:1.6rem}
+.menu .meta{color:var(--muted);margin:2px 0 18px}
+.course{display:grid;grid-template-columns:2.2rem 1fr;gap:4px 10px;padding:12px 0;border-top:1px solid var(--line)}
+.course .n{font-family:Limelight,Georgia,serif;color:var(--gold);font-size:1.3rem;line-height:1.2}
+.course b{font-weight:600}
+.course p{margin:2px 0 0;color:var(--muted);font-size:.95rem}
+.course .pair{color:var(--jade);font-size:.9rem;margin-top:4px}
+.mains{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:4px}
+.mains li{font-size:.95rem}
+.mains span{color:var(--muted)}
+
+/* Seating */
+.seatwrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--night2)}
+table.seats{width:100%;min-width:680px;border-collapse:collapse}
+table.seats th,table.seats td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+table.seats th{color:var(--muted);font-weight:500;font-size:.92rem}
+table.seats td:first-child b{display:block;font-weight:600}
+table.seats td:first-child span{color:var(--muted);font-size:.9rem}
+table.seats td.p{font-variant-numeric:tabular-nums;white-space:nowrap}
+table.seats tr:last-child td{border-bottom:0}
+.pl{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-variant-numeric:tabular-nums}
+.pl span{font-size:.82rem;font-weight:600;color:var(--night);background:var(--gold);padding:4px 11px;border-radius:999px}
+.pl:hover span{background:#ECCD82}
+.dash{color:var(--muted)}
+.note{color:var(--muted);font-size:.95rem;margin:14px 0 0;max-width:70ch}
+
+/* VIP */
+.vip{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+@media (max-width:860px){.vip{grid-template-columns:1fr}}
+.vip img{border-radius:16px;width:100%;height:100%;max-height:440px;object-fit:cover}
+.vip ul{padding-left:1.1rem;margin:0 0 22px;display:grid;gap:6px}
+
+/* Gallery */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:10px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;border-radius:12px}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic figcaption{position:absolute;inset:auto 0 0 0;padding:26px 12px 9px;font-size:.9rem;background:linear-gradient(180deg,transparent,rgba(20,23,46,.88))}
+.mosaic .w2{grid-column:span 2}.mosaic .h2{grid-row:span 2}
+@media (max-width:760px){.mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+@media (max-width:860px){.faq{grid-template-columns:1fr}}
+details{border-top:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:8px 0 2px}
+
+/* Closing */
+.close{text-align:center;padding:84px 0 70px;background:linear-gradient(180deg,var(--night),var(--night2))}
+.close h2{font-size:clamp(2.2rem,6vw,3.6rem)}
+.close p{color:var(--muted);margin:10px auto 26px;max-width:52ch}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer a{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Zenita</a>
+    <ul>
+      <li><a href="#experiences">Experiences</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#seating">Seating</a></li>
+      <li><a href="#vip">VIP</a></li>
+      <li><a href="#stay">Stay</a></li>
+      <li><a href="#faq">Good to know</a></li>
+    </ul>
+    <a class="btn" data-book="all" href="#">Reserve</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img src="assets/hero.jpg" alt="The Aztec Hotel at dusk, with the glowing Zenita rooftop above the neon Aztec sign" fetchpriority="high">
+  <div class="copy">
+    <div class="wrap">
+      <h1>Noche de Oro</h1>
+      <p class="when">New Year’s Eve at Zenita Rooftop<br>Thursday, December 31, 2026</p>
+      <p class="sub">A paired tasting dinner, live Latin jazz, and a countdown on the roof of the Aztec, with a DJ and open bar until 2 AM.</p>
+    </div>
+    <div class="wrap ctas">
+      <a class="btn" href="#experiences">Choose your experience</a>
+      <a class="btn line" href="#film">Watch the film</a>
+    </div>
+  </div>
+</header>
+
+<section id="experiences">
+  <div class="wrap">
+    <h2>Choose your night</h2>
+    <p class="lead">Three ways to ring in 2027. Every ticket is prepaid and priced per guest, before tax and service charge. Your exact price depends on where you sit.</p>
+    <div class="xp">
+      <article class="card">
+        <img src="assets/dining.jpg" alt="Zenita’s dining room set for dinner under glass globe pendants" loading="lazy">
+        <div class="body">
+          <h3>Early dinner</h3>
+          <p class="time">5:30 to 7:30 PM</p>
+          <p class="price">From <b>$135</b> per guest</p>
+          <ul>
+            <li>Welcome bubbles</li>
+            <li>Three courses with your choice of main</li>
+            <li>Wine, cocktail or zero-proof pairing with every course</li>
+            <li>Live Latin jazz band</li>
+          </ul>
+          <a class="btn line" data-book="early" href="#">Book early dinner</a>
+        </div>
+      </article>
+      <article class="card feature">
+        <img src="assets/rooftop.jpg" alt="The Zenita rooftop glowing at dusk above downtown San Antonio" loading="lazy">
+        <div class="body">
+          <span class="tag">The full night</span>
+          <h3>Grand dinner + party</h3>
+          <p class="time">8:30 PM to 2 AM</p>
+          <p class="price">From <b>$275</b> per guest</p>
+          <ul>
+            <li>Welcome bubbles and five paired courses, 8:30 to 11 PM, with a DJ dinner set</li>
+            <li>From 11 PM: the party, with open bar and cocktail service at your table until 2 AM</li>
+            <li>Champagne toast at midnight</li>
+            <li>House-made chips, favors, and your table all night</li>
+          </ul>
+          <a class="btn" data-book="grand" href="#">Book the full night</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="assets/cocktail.jpg" alt="A citrus cocktail on an Aztec Hotel coaster with festive lights behind" loading="lazy">
+        <div class="body">
+          <h3>Party only</h3>
+          <p class="time">Doors 10:30 PM, party 11 PM to 2 AM</p>
+          <p class="price">From <b>$125</b> per guest</p>
+          <ul>
+            <li>DJ party on the rooftop</li>
+            <li>Open bar: spirits, beer, wine and signature cocktails</li>
+            <li>Champagne toast at midnight</li>
+            <li>House-made chips and party favors</li>
+            <li>Direct access to the Z-Bar, with reserved seats available at the skyline rounds</li>
+          </ul>
+          <a class="btn line" data-book="party" href="#">Book the party</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="steps" aria-hidden="true"></div>
+
+<section id="film" class="film">
+  <div class="wrap">
+    <h2>Step inside Zenita</h2>
+    <p class="lead">The rooftop, the dining room and Executive Chef Jaime Hernandez’s Latin-Asian kitchen, high above the River Walk.</p>
+    <video controls playsinline preload="metadata" poster="assets/film-poster.jpg" aria-label="Zenita Rooftop Restaurant and Bar video tour">
+      <source src="assets/zenita-film.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>The menu</h2>
+    <p class="lead">Latin, Asian and Mexican flavors from Executive Chef Jaime Hernandez, made for the last night of the year. Choose your main and your pairing when you book. A full vegetarian and vegan menu is available for every seating.</p>
+    <div class="menus">
+      <div class="menu">
+        <h3>Early dinner</h3>
+        <p class="meta">Three courses, 5:30 to 7:30 PM, with wine, cocktail or zero-proof pairings</p>
+        <div class="course"><span class="n">1</span><div><b>Hamachi &amp; Gulf shrimp ceviche</b><p>Yuzu-coconut leche de tigre, avocado mousse, compressed cucumber, serrano chile, crispy taro chips</p></div></div>
+        <div class="course"><span class="n">2</span><div><b>Your choice of entrée</b><p>Any of the four entrées on the grand dinner menu</p></div></div>
+        <div class="course"><span class="n">3</span><div><b>Chocolate tres leches entremet</b><p>Dark chocolate mousse, tres leches cake, black sesame praline crunch, strawberry-yuzu sorbet, gold leaf</p></div></div>
+      </div>
+      <div class="menu">
+        <h3>Grand dinner</h3>
+        <p class="meta">Five courses, 8:30 to 11 PM, with wine or cocktail pairings</p>
+        <div class="course"><span class="n">1</span><div><b>Hamachi &amp; Gulf shrimp ceviche</b><p>Yuzu-coconut leche de tigre, avocado mousse, compressed cucumber, serrano chile, crispy taro chips</p><p class="pair">Taittinger Brut, or a Champagne-topped Cherry Blossom Paloma</p></div></div>
+        <div class="course"><span class="n">2</span><div><b>Duck confit taco</b><p>Five-spice duck confit, mole negro, pickled Asian pear, micro cilantro, blue-corn tortilla</p><p class="pair">Pinot Noir, or a Prickly Pear Yuzu Margarita</p></div></div>
+        <div class="course"><span class="n">3</span><div><b>Roasted corn &amp; miso velouté</b><p>Fire-roasted sweet corn, white miso, roasted poblano crema, sesame oil, lump crab</p><p class="pair">Chardonnay, or a Spicy Cucumber Martini</p></div></div>
+        <div class="course"><span class="n">4</span><div><b>Your choice of entrée</b>
+          <ul class="mains">
+            <li>Akaushi ribeye <span>8 oz, miso sweet potato fondant, elote succotash, bordelaise-mole</span></li>
+            <li>Maple-miso duck breast <span>forbidden black rice, ginger-carrot purée, tamarind-hoisin glaze</span></li>
+            <li>Chile-lacquered sea bass <span>coconut jasmine rice, charred bok choy, salsa macha beurre blanc</span></li>
+            <li>Coffee-ancho lamb loin <span>huitlacoche risotto, roasted baby carrots, mezcal demi-glace</span></li>
+          </ul><p class="pair">Each entrée has its own wine and cocktail pairing</p></div></div>
+        <div class="course"><span class="n">5</span><div><b>Chocolate tres leches entremet</b><p>Dark chocolate mousse, tres leches cake, black sesame praline crunch, strawberry-yuzu sorbet, gold leaf, with an Aztec Carajillo served tableside</p></div></div>
+      </div>
+      <div class="menu veg">
+        <h3>Vegetarian &amp; vegan tasting menu</h3>
+        <p class="meta">Five courses at the grand dinner; the early dinner serves courses 1, 4 and 5</p>
+        <div class="course"><span class="n">1</span><div><b>Hearts of palm &amp; watermelon ceviche</b> <span class="vg">vegan</span><p>Compressed watermelon, cucumber ribbons, yuzu leche de tigre, avocado mousse, taro crisp</p></div></div>
+        <div class="course"><span class="n">2</span><div><b>Mushroom birria blue-corn sope</b><p>Wild mushrooms, birria consommé reduction, roasted corn crema, cilantro oil</p></div></div>
+        <div class="course"><span class="n">3</span><div><b>Roasted corn &amp; coconut miso velouté</b> <span class="vg">vegan</span><p>Fire-roasted corn, white miso, poblano crema, crispy maitake mushroom</p></div></div>
+        <div class="course"><span class="n">4</span><div><b>Your choice of entrée</b>
+          <ul class="mains">
+            <li>Miso-glazed king oyster mushroom steak <span>vegan; sweet potato fondant, charred broccolini, mole bordelaise</span></li>
+            <li>Black truffle huitlacoche risotto <span>vegetarian; wild mushrooms, cotija, truffle butter, crispy leeks</span></li>
+            <li>Chile-lacquered cauliflower filet <span>vegan; forbidden rice, bok choy, salsa macha beurre blanc</span></li>
+          </ul></div></div>
+        <div class="course"><span class="n">5</span><div><b>Chocolate &amp; matcha entremet</b> <span class="vg">vegan on request</span><p>Dark chocolate mousse, matcha sponge, black sesame praline, yuzu-strawberry sorbet, edible gold</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="steps" aria-hidden="true"></div>
+
+<section id="seating">
+  <div class="wrap">
+    <h2>Where you’ll sit</h2>
+    <p class="lead">Indoors in the dining room or out on the heated terrace, priced by view. Pick your area and seating to book it on OpenTable; our team assigns your table within that area. Prices are per guest, before tax and service charge.</p>
+    <div class="seatwrap">
+      <table class="seats">
+        <thead><tr><th scope="col">Seating area</th><th scope="col">Early dinner</th><th scope="col">Grand dinner + party</th><th scope="col">Party only</th></tr></thead>
+        <tbody>
+          <tr><td><b>Skyline Rail</b><span>Outdoor, front row for the midnight view</span></td><td class="p"><a class="pl" data-book="E3" href="#" aria-label="Book Skyline Rail early dinner, $175 per guest">$175<span>Book</span></a></td><td class="p"><a class="pl" data-book="G4" href="#" aria-label="Book Skyline Rail grand dinner and party, $350 per guest">$350<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Parapet Two-Tops</b><span>Outdoor tables for two along the rooftop edge</span></td><td class="p"><a class="pl" data-book="E2" href="#" aria-label="Book Parapet Two-Tops early dinner, $165 per guest">$165<span>Book</span></a></td><td class="p"><a class="pl" data-book="G3" href="#" aria-label="Book Parapet Two-Tops grand dinner and party, $325 per guest">$325<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Chef’s Communal Table</b><span>Indoor table for ten, with an extra chef’s bite</span></td><td class="p"><a class="pl" data-book="E2" href="#" aria-label="Book Chef’s Communal Table early dinner, $165 per guest">$165<span>Book</span></a></td><td class="p"><a class="pl" data-book="G3" href="#" aria-label="Book Chef’s Communal Table grand dinner and party, $325 per guest">$325<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Lounge Rounds</b><span>Indoor six-tops beside the bar</span></td><td class="p"><a class="pl" data-book="E1" href="#" aria-label="Book Lounge Rounds early dinner, $150 per guest">$150<span>Book</span></a></td><td class="p"><a class="pl" data-book="G2" href="#" aria-label="Book Lounge Rounds grand dinner and party, $310 per guest">$310<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Dining Room</b><span>Candlelit tables in the main room</span></td><td class="p"><a class="pl" data-book="E1" href="#" aria-label="Book Dining Room early dinner, $150 per guest">$150<span>Book</span></a></td><td class="p"><a class="pl" data-book="G1" href="#" aria-label="Book Dining Room grand dinner and party, $295 per guest">$295<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Window Two-Tops</b><span>Intimate tables for two</span></td><td class="p"><a class="pl" data-book="E1" href="#" aria-label="Book Window Two-Tops early dinner, $150 per guest">$150<span>Book</span></a></td><td class="p"><a class="pl" data-book="G1" href="#" aria-label="Book Window Two-Tops grand dinner and party, $295 per guest">$295<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Terrace</b><span>Heated outdoor tables for two and four</span></td><td class="p"><a class="pl" data-book="E1" href="#" aria-label="Book Terrace early dinner, $150 per guest">$150<span>Book</span></a></td><td class="p"><a class="pl" data-book="G1" href="#" aria-label="Book Terrace grand dinner and party, $295 per guest">$295<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>City-View Two-Tops</b><span>Intimate tables for two along the glass wall, with skyline views</span></td><td class="p"><a class="pl" data-book="E1" href="#" aria-label="Book City-View Two-Tops early dinner, $150 per guest">$150<span>Book</span></a></td><td class="p"><a class="pl" data-book="G1" href="#" aria-label="Book City-View Two-Tops grand dinner and party, $295 per guest">$295<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Z-Bar</b><span>Dinner served at the bar; six seats for the grand dinner</span></td><td class="p"><a class="pl" data-book="E4" href="#" aria-label="Book Z-Bar early dinner, $135 per guest">$135<span>Book</span></a></td><td class="p"><a class="pl" data-book="G5" href="#" aria-label="Book Z-Bar grand dinner and party, $275 per guest">$275<span>Book</span></a></td><td class="dash">—</td></tr>
+          <tr><td><b>Skyline Cocktail Rounds</b><span>Outdoor lounge rounds for 4, or 6 to 8 at table 400</span></td><td class="dash">—</td><td class="dash">—</td><td class="p"><a class="pl" data-book="P4" href="#" aria-label="Book Skyline Cocktail Rounds party only, $175 per guest">$175<span>Book</span></a></td></tr>
+          <tr><td><b>General Admission</b><span>Mingle, dance and order straight from the Z-Bar; no reserved seat</span></td><td class="dash">—</td><td class="dash">—</td><td class="p"><a class="pl" data-book="P1" href="#" aria-label="Book General Admission party only, $125 per guest">$125<span>Book</span></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Tables are booked for their full number of seats, so a table for two needs two tickets. Bar seats are sold one at a time. Have a favorite table? Add it to your booking notes and we’ll do our best.</p>
+  </div>
+</section>
+
+<section id="vip">
+  <div class="wrap vip">
+    <img src="assets/lounge.jpg" alt="Zenita’s rooftop lounge under a glass chandelier, with city views through the windows" loading="lazy">
+    <div>
+      <h2>VIP tables</h2>
+      <p class="lead" style="margin-bottom:16px">Two private tables for six and eight, with the night built around you.</p>
+      <ul>
+        <li>The five-course grand dinner with pairings for your whole table</li>
+        <li>Premium open bar during the party</li>
+        <li>A bottle of Taittinger at midnight</li>
+        <li>A dedicated server all night</li>
+      </ul>
+      <p style="margin:0 0 20px"><b style="font-size:1.6rem;font-weight:500">$2,500</b> <span style="color:var(--muted)">per table for the grand dinner and party, or $1,200 for the party only</span></p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn" data-book="G6" href="#">Book VIP: dinner + party</a><a class="btn line" data-book="P5" href="#">Book VIP: party only</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="stay">
+  <div class="wrap vip">
+    <div>
+      <h2>Stay the night</h2>
+      <p class="lead" style="margin-bottom:16px">Make it a night at the Aztec Hotel. When the party ends at 2 AM, your room is an elevator ride away, not a rideshare queue.</p>
+      <ul>
+        <li>Rooms at the Aztec Hotel, San Antonio, a Tribute Portfolio Hotel</li>
+        <li>Check in December 31, check out January 1</li>
+        <li>Marriott Bonvoy members earn points on their stay</li>
+      </ul>
+      <p style="margin:0 0 20px;color:var(--muted)">Rooms are booked separately on Marriott.com. Your NYE tickets are booked on OpenTable.</p>
+      <a class="btn" data-book="stay" href="https://www.marriott.com/SATBW">Book a room on Marriott.com</a>
+    </div>
+    <img src="assets/room.jpg" alt="An Aztec Hotel guest room with a teal accent wall, gold sunburst light and a king bed" loading="lazy">
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:20px">
+  <div class="wrap">
+    <h2>A taste of the night</h2>
+    <p class="lead">Atop the Aztec, the 1926 landmark on the River Walk.</p>
+    <div class="mosaic">
+      <figure class="w2 h2"><img src="assets/dessert.jpg" alt="A chocolate dessert with a glass of sparkling wine" style="object-position:50% 60%" loading="lazy"><figcaption>Chocolate for dessert, and bubbles at midnight</figcaption></figure>
+      <figure><img src="assets/ceviche.jpg" alt="A Zenita ceviche with avocado and crisp tortilla chips" loading="lazy"><figcaption>Ceviche, Zenita-style</figcaption></figure>
+      <figure><img src="assets/snapper.jpg" alt="Seared fish over a silky purée with herbs" loading="lazy"><figcaption>From the sea</figcaption></figure>
+      <figure><img src="assets/steak.jpg" alt="Sliced grilled steak with bok choy" loading="lazy"><figcaption>From the grill</figcaption></figure>
+      <figure><img src="assets/flame.jpg" alt="A flamed cocktail being finished" loading="lazy"><figcaption>Finished tableside</figcaption></figure>
+      <figure class="w2"><img src="assets/entry.jpg" alt="The Aztec Hotel lobby entrance with a sign pointing to Zenita" loading="lazy"><figcaption>Arrive through the Aztec’s lobby</figcaption></figure>
+      <figure class="w2"><img src="assets/neon.jpg" alt="The Aztec’s neon blade sign at night" style="object-position:50% 30%" loading="lazy"><figcaption>The Aztec’s neon sign after dark</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Good to know</h2>
+    <div class="faq">
+      <div>
+        <details><summary>What should I wear?</summary><p>Black and gold, cocktail attire. The terrace is heated, but bring a layer if you’re sitting outside.</p></details>
+        <details><summary>Is there an age requirement?</summary><p>The party and open bar are for guests 21 and over. Valid ID is checked at the rooftop entrance.</p></details>
+        <details><summary>How long is the early dinner?</summary><p>Early dinner runs 5:30 to 7:30 PM. Your table is needed back at 7:30 PM for the grand dinner, and the party is not included.</p></details>
+        <details><summary>How does the grand dinner night run?</summary><p>Dinner starts at 8:30 PM, and the five courses finish by 11 PM. Drinks during dinner are your paired pours. At 11 PM the party begins: open bar until 2 AM, with cocktail service at your table or straight from the Z-Bar. Your table is yours all night.</p></details>
+        <details><summary>Can I book a table for fewer people?</summary><p>Tables are sold for their full number of seats, so a table for four needs four tickets. Bar seats are sold individually.</p></details>
+        <details><summary>Do you have vegetarian and vegan options?</summary><p>Yes, a full vegetarian and vegan tasting menu: five courses at the grand dinner, three at the early dinner. Choose one of its entrées when you book, and tell us about any allergies.</p></details>
+      </div>
+      <div>
+        <details><summary>What’s the cancellation policy?</summary><p>Tickets are prepaid. They’re refundable until December 15, 2026. After that, you can transfer them to another name until December 29.</p></details>
+        <details><summary>Are tax and service included?</summary><p>Prices are per guest and don’t include sales tax or service charge, which are added at checkout.</p></details>
+        <details><summary>Can I add upgrades?</summary><p>Yes, when you book. Add the Reserve Pairing for $75 per guest, or a caviar supplement on the first course for $35.</p></details>
+        <details><summary>Where is Zenita?</summary><p>On the roof of the Aztec Hotel, 201 East Commerce Street, San Antonio, TX 78205. Check in at the hotel lobby and take the elevator to the rooftop.</p></details>
+        <details><summary>Can I stay the night?</summary><p>Yes. Book a room at the Aztec Hotel on <a data-book="stay" href="https://www.marriott.com/SATBW">Marriott.com</a>, so you’re only an elevator ride from bed. Rooms and NYE tickets are booked separately.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <h2>See you on the roof</h2>
+    <p>Seats are limited, and every table is sold whole. Reserve yours before they’re gone.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center"><a class="btn" data-book="all" href="#">Reserve your table</a><a class="btn line" data-book="stay" href="https://www.marriott.com/SATBW">Book a room</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Zenita Rooftop Restaurant &amp; Bar, Aztec Hotel, San Antonio, a Tribute Portfolio Hotel<br>201 East Commerce Street, San Antonio, TX 78205</span>
+    <span><a href="https://www.marriott.com/SATBW" target="_blank" rel="noopener">Aztec Hotel on Marriott.com</a></span>
+  </div>
+</footer>
+
+<script>
+/*
+  BOOKING LINKS: paste the OpenTable Experience links here once they're published.
+  In OpenTable, open each Experience and copy its shareable link.
+  Each button uses its own Experience link (E1 to P5); a blank one falls back to its seating link, then to "all", then to an OpenTable search for Zenita.
+*/
+const BOOKING_LINKS = {
+  all:   "",   // Zenita's OpenTable page listing all NYE Experiences
+  stay:  "",   // Marriott.com room link; paste a special-rate or package link from Revenue here. Blank uses the hotel's Marriott.com page
+  early: "",   // fallback for any early dinner button below left blank
+  grand: "",   // fallback for any grand dinner button below left blank
+  party: "",   // fallback for any party button below left blank
+
+  E1: "",  // NYE Early Dinner: Dining Room & Terrace
+  E2: "",  // NYE Early Dinner: Chef's Table & Parapet
+  E3: "",  // NYE Early Dinner: Skyline Rail
+  E4: "",  // NYE Early Dinner: Z-Bar
+  G1: "",  // NYE Grand Dinner + Party: Dining Room & Terrace
+  G2: "",  // NYE Grand Dinner + Party: Lounge Rounds
+  G3: "",  // NYE Grand Dinner + Party: Chef's Table & Parapet
+  G4: "",  // NYE Grand Dinner + Party: Skyline Rail
+  G5: "",  // NYE Grand Dinner + Party: Z-Bar
+  G6: "",  // NYE Grand Dinner + Party: VIP Table
+  P1: "",  // NYE Rooftop Party: General Admission
+  P4: "",  // NYE Rooftop Party: Skyline Cocktail Round
+  P5: ""   // NYE Rooftop Party: VIP Table
+};
+const FALLBACK = "https://www.opentable.com/s?term=Zenita%20San%20Antonio";
+const STAY_FALLBACK = "https://www.marriott.com/SATBW";
+document.querySelectorAll("[data-book]").forEach(a => {
+  const key = a.dataset.book;
+  if (key === "stay") { a.href = BOOKING_LINKS.stay || STAY_FALLBACK; a.target = "_blank"; a.rel = "noopener"; return; }
+  const group = {E:"early",G:"grand",P:"party"}[key[0]] || "";
+  a.href = BOOKING_LINKS[key] || BOOKING_LINKS[group] || BOOKING_LINKS.all || FALLBACK;
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+</script>
+</body>
+</html>
