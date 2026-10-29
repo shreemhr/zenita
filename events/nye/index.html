@@ -10,11 +10,11 @@
 <meta property="og:image" content="assets/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --night:#14172E; --night2:#1C2142; --panel:#222851; --ink:#F1EBDC; --muted:#B4B6CC;
-  --gold:#E0BD68; --gold-deep:#B8923A; --line:#353C6B; --jade:#6DBFA7;
+  --night:#212E40; --night2:#192231; --panel:#2B3850; --ink:#FAF6EC; --muted:rgba(250,246,236,.65);
+  --gold:#D5BF88; --gold-deep:#914421; --line:rgba(213,191,136,.22); --jade:#ABC1D0;
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -25,21 +25,21 @@ img,video{max-width:100%;display:block}
 a{color:var(--gold)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-h1,h2{font-family:Limelight,"Didot","Bodoni 72",Georgia,serif;font-weight:400;color:var(--gold);line-height:1.05;margin:0}
+h1,h2{font-family:"Cormorant Garamond","Didot","Bodoni 72",Georgia,serif;font-weight:400;color:var(--gold);line-height:1.05;margin:0}
 h2{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:10px}
 h3{font-size:1.2rem;font-weight:600;margin:0}
 p.lead{color:var(--muted);max-width:60ch;margin:0 0 28px;font-size:1.05rem}
 section{padding:72px 0}
 .steps{height:14px;background:linear-gradient(135deg,var(--gold) 25%,transparent 25%) 0 0/14px 14px,linear-gradient(225deg,var(--gold) 25%,transparent 25%) 0 0/14px 14px;opacity:.5}
 .btn{display:inline-block;background:var(--gold);color:var(--night);text-decoration:none;font-weight:600;padding:13px 24px;border-radius:999px;border:2px solid var(--gold)}
-.btn:hover{background:#ECCD82}
+.btn:hover{background:#F5E2A9}
 .btn.line{background:transparent;color:var(--gold)}
-.btn.line:hover{background:rgba(224,189,104,.12)}
+.btn.line:hover{background:rgba(213,191,136,.12)}
 
 /* Nav */
 .nav{position:sticky;top:0;z-index:10;background:rgba(20,23,46,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-.nav .brand{font-family:Limelight,Georgia,serif;color:var(--gold);text-decoration:none;font-size:1.25rem}
+.nav .brand{font-family:"Cormorant Garamond",Georgia,serif;color:var(--gold);text-decoration:none;font-size:1.25rem}
 .nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
 .nav ul a{color:var(--ink);text-decoration:none;font-size:.95rem}
 .nav ul a:hover{color:var(--gold)}
@@ -53,7 +53,7 @@ section{padding:72px 0}
 .hero .copy{position:absolute;z-index:1;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:40px 0 34px}
 .hero h1{font-size:clamp(3.2rem,10vw,7rem);text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .hero .when{font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:500;margin:12px 0 6px}
-.hero .sub{max-width:44ch;margin:0;color:#E4DFD2}
+.hero .sub{max-width:44ch;margin:0;color:#FAF6EC}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
 @media (max-width:600px){.hero img{height:84vh;object-position:63% 40%}}
 
@@ -80,10 +80,10 @@ section{padding:72px 0}
 .menu{background:var(--night2);border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px}
 .menu.veg{grid-column:1/-1}
 .vg{display:inline-block;font-size:.75rem;font-weight:600;color:var(--jade);border:1px solid var(--jade);border-radius:999px;padding:0 8px;margin-left:6px;vertical-align:2px}
-.menu h3{font-family:Limelight,Georgia,serif;font-weight:400;color:var(--gold);font-size:1.6rem}
+.menu h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;color:var(--gold);font-size:1.6rem}
 .menu .meta{color:var(--muted);margin:2px 0 18px}
 .course{display:grid;grid-template-columns:2.2rem 1fr;gap:4px 10px;padding:12px 0;border-top:1px solid var(--line)}
-.course .n{font-family:Limelight,Georgia,serif;color:var(--gold);font-size:1.3rem;line-height:1.2}
+.course .n{font-family:"Cormorant Garamond",Georgia,serif;color:var(--gold);font-size:1.3rem;line-height:1.2}
 .course b{font-weight:600}
 .course p{margin:2px 0 0;color:var(--muted);font-size:.95rem}
 .course .pair{color:var(--jade);font-size:.9rem;margin-top:4px}
@@ -102,7 +102,7 @@ table.seats td.p{font-variant-numeric:tabular-nums;white-space:nowrap}
 table.seats tr:last-child td{border-bottom:0}
 .pl{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-variant-numeric:tabular-nums}
 .pl span{font-size:.82rem;font-weight:600;color:var(--night);background:var(--gold);padding:4px 11px;border-radius:999px}
-.pl:hover span{background:#ECCD82}
+.pl:hover span{background:#F5E2A9}
 .dash{color:var(--muted)}
 .note{color:var(--muted);font-size:.95rem;margin:14px 0 0;max-width:70ch}
 

@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap">
 <style>
 html{-webkit-text-size-adjust:100%}
 body{margin:0}
@@ -21,26 +21,16 @@ img{max-width:100%}
 :root{
   --bg:#F6F1EC;          /* adobe plaster */
   --surface:#FFFFFF;
-  --ink:#2A1E1A;         /* mole */
-  --muted:#6E5D55;
-  --line:#E4D9D0;
-  --chile:#A8321F;       /* guajillo red, primary accent */
-  --chile-ink:#FFFFFF;
-  --agave:#1F5A55;       /* agave teal, secondary */
-  --gold:#D99A2B;        /* golden hour */
-  --hero-a:#3A1F2B; --hero-b:#8A3A24; --hero-c:#D99A2B; --hero-ink:#FFF7EC;
-  --display:"Gloock", Georgia, "Times New Roman", serif;
-  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1A1412; --surface:#241C19; --ink:#F3E9E1; --muted:#B8A79D; --line:#3A2E29;
-  --chile:#E0674E; --chile-ink:#1A1412; --agave:#6FB8AE; --gold:#E8B252;
-  --hero-a:#1F1118; --hero-b:#5E2617; --hero-c:#A86F18; --hero-ink:#FFF7EC; color-scheme:dark;
-}}
-:root[data-theme="dark"]{
-  --bg:#1A1412; --surface:#241C19; --ink:#F3E9E1; --muted:#B8A79D; --line:#3A2E29;
-  --chile:#E0674E; --chile-ink:#1A1412; --agave:#6FB8AE; --gold:#E8B252;
-  --hero-a:#1F1118; --hero-b:#5E2617; --hero-c:#A86F18; --hero-ink:#FFF7EC; color-scheme:dark;
+  --ink:#212E40;
+  --muted:rgba(33,46,64,.65);
+  --line:rgba(33,46,64,.14);
+  --chile:#BD642A;       /* rust, primary accent */
+  --chile-ink:#FAF6EC;
+  --agave:#23411D;       /* forest, secondary */
+  --gold:#D5BF88;        /* golden hour */
+  --hero-a:#212E40; --hero-b:#914421; --hero-c:#D5BF88; --hero-ink:#FAF6EC;
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
@@ -51,7 +41,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
 /* Hero */
 .hero{background:linear-gradient(165deg,var(--hero-a) 0%,var(--hero-b) 62%,var(--hero-c) 100%);color:var(--hero-ink);position:relative;overflow:hidden}
 .hero .wrap{padding-block:56px 64px;position:relative;z-index:1;display:grid;gap:18px}
-.hero .sun{position:absolute;right:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,214,140,.55) 0%,rgba(255,214,140,0) 68%);pointer-events:none}
+.hero .sun{position:absolute;right:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(213,191,136,.55) 0%,rgba(213,191,136,0) 68%);pointer-events:none}
 .hero .skyline{position:absolute;left:0;right:0;bottom:0;height:44px;opacity:.28}
 .hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02}
 .hero p.lede{max-width:56ch;font-size:1.08rem;margin:0;opacity:.95}
