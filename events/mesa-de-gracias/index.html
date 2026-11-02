@@ -40,10 +40,11 @@ h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
 .eyebrow{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
 
 /* Hero */
-.hero{background:linear-gradient(165deg,var(--hero-a) 0%,var(--hero-b) 62%,var(--hero-c) 100%);color:var(--hero-ink);position:relative;overflow:hidden}
-.hero .wrap{padding-block:144px 64px;position:relative;z-index:1;display:grid;gap:18px}
-.hero .sun{position:absolute;right:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(213,191,136,.55) 0%,rgba(213,191,136,0) 68%);pointer-events:none}
-.hero .skyline{position:absolute;left:0;right:0;bottom:0;height:44px;opacity:.28}
+.hero{background:var(--hero-a);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;border:4px solid var(--rust);box-sizing:border-box;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(165deg,rgba(33,46,64,.88) 0%,rgba(145,68,33,.5) 62%,rgba(213,191,136,.4) 100%)}
+.hero .wrap{padding-block:144px 64px;position:relative;z-index:3;display:grid;gap:18px}
+.hero .sun{position:absolute;right:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(213,191,136,.4) 0%,rgba(213,191,136,0) 68%);pointer-events:none;z-index:2}
 .hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02}
 .hero p.lede{max-width:56ch;font-size:1.08rem;margin:0;opacity:.95}
 .facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-weight:500}
@@ -240,8 +241,8 @@ footer .social a:hover{color:var(--gold);}
   </div>
 </header>
 <header class="hero">
+  <img class="hero-photo" src="../nye/assets/rooftop.jpg" alt="The Zenita rooftop glowing at dusk above the downtown San Antonio skyline" fetchpriority="high">
   <div class="sun" aria-hidden="true"></div>
-  <svg class="skyline" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true"><path fill="#000" d="M0 44V30h60v-8h40v8h30V14h24v16h50V22h36v-6h20v6h40v22h20V8h18v36h40V26h70v-8h30v8h60V18h28v-8h14v8h40v26h50V24h60v20h40V12h22v-6h10v6h20v32h60V28h50v-6h40v22h40V20h30v24h50V30h70v14z"/></svg>
   <div class="wrap">
     <div class="eyebrow">Zenita Rooftop · San Antonio</div>
     <h1>Mesa de Gracias</h1>
