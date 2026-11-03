@@ -108,6 +108,8 @@ table.seats tr:last-child td{border-bottom:0}
 .pl{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-variant-numeric:tabular-nums}
 .pl span{font-size:.82rem;font-weight:600;color:var(--night);background:var(--gold);padding:4px 11px;border-radius:999px}
 .pl:hover span{background:#F5E2A9}
+.pl.soon{cursor:default}
+.pl.soon span{color:var(--muted);background:transparent;border:1px solid var(--line);font-weight:500}
 .dash{color:var(--muted)}
 .note{color:var(--muted);font-size:.95rem;margin:14px 0 0;max-width:70ch}
 
@@ -438,7 +440,7 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
           <tr><td><b>City-View Two-Tops</b><span>Intimate tables for two along the glass wall, with skyline views</span></td><td class="p"><a class="pl" data-book="E1" href="#" aria-label="Book City-View Two-Tops early dinner, $150 per guest">$150<span>Book</span></a></td><td class="p"><a class="pl" data-book="G1" href="#" aria-label="Book City-View Two-Tops grand dinner and party, $295 per guest">$295<span>Book</span></a></td><td class="dash">—</td></tr>
           <tr><td><b>Z-Bar</b><span>Dinner served at the bar; six seats for the grand dinner</span></td><td class="p"><a class="pl" data-book="E4" href="#" aria-label="Book Z-Bar early dinner, $135 per guest">$135<span>Book</span></a></td><td class="p"><a class="pl" data-book="G5" href="#" aria-label="Book Z-Bar grand dinner and party, $275 per guest">$275<span>Book</span></a></td><td class="dash">—</td></tr>
           <tr><td><b>Skyline Cocktail Rounds</b><span>Outdoor lounge rounds for 4, or 6 to 8 at table 400</span></td><td class="dash">—</td><td class="dash">—</td><td class="p"><a class="pl" data-book="P4" href="#" aria-label="Book Skyline Cocktail Rounds party only, $175 per guest">$175<span>Book</span></a></td></tr>
-          <tr><td><b>General Admission</b><span>Mingle, dance and order straight from the Z-Bar; no reserved seat</span></td><td class="dash">—</td><td class="dash">—</td><td class="p"><a class="pl" data-book="P1" href="#" aria-label="Book General Admission party only, $125 per guest">$125<span>Book</span></a></td></tr>
+          <tr><td><b>General Admission</b><span>Mingle, dance and order straight from the Z-Bar; no reserved seat</span></td><td class="dash">—</td><td class="dash">—</td><td class="p"><span class="pl soon" aria-label="General Admission party only, $125 per guest — on sale soon">$125<span>On sale soon</span></span></td></tr>
         </tbody>
       </table>
     </div>
@@ -609,7 +611,6 @@ const BOOKING_LINKS = {
   G5: "https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=841226&utm_source=external&utm_medium=referral&utm_campaign=shared&covers=1&dateTime=2026-12-31T20:30",  // NYE Grand Dinner + Party: Z-Bar
   G6: "https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=841224&utm_source=external&utm_medium=referral&utm_campaign=shared&covers=8&dateTime=2026-12-31T20:30",  // NYE Grand Dinner + Party: VIP Table (8 guests)
   G7: "https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=841225&utm_source=external&utm_medium=referral&utm_campaign=shared&covers=6&dateTime=2026-12-31T20:30",  // NYE Grand Dinner + Party: Chandelier Table (6 guests)
-  P1: "",  // NYE Rooftop Party: General Admission
   P4: "https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=841219&utm_source=external&utm_medium=referral&utm_campaign=shared&covers=4&dateTime=2026-12-31T23:00",  // NYE Rooftop Party: Skyline Cocktail Round
   P5: "https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=841221&utm_source=external&utm_medium=referral&utm_campaign=shared&covers=6&dateTime=2026-12-31T23:00"   // NYE Rooftop Party: VIP Table
 };
