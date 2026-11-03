@@ -288,7 +288,7 @@ footer .social a:hover{color:var(--gold);}
           <p>The full Mesa de Gracias buffet. Seating is assigned by the restaurant in the dining room or on the heated terrace.</p>
           <div style="display:grid;gap:14px">
             <ul class="prices"><li><span>Adult (13+)</span><b>$89</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
-            <a class="book" data-id="839765" href="#">Book Lunch Buffet</a>
+            <a class="book" data-id="843730" data-covers="2" data-datetime="2026-11-26T11:00" href="#">Book Lunch Buffet</a>
           </div>
         </article>
         <article class="card featured">
@@ -297,7 +297,7 @@ footer .social a:hover{color:var(--gold);}
           <p>Seats on the Skyline Rail or Parapet, the rooftop's front row. Two guests per table.</p>
           <div style="display:grid;gap:14px">
             <ul class="prices"><li><span>Adult (13+)</span><b>$109</b></li><li><span>Child (5–12)</span><b>$59</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
-            <a class="book" data-id="839770" href="#">Book Skyline Seats</a>
+            <a class="book" data-id="843739" data-covers="2" data-datetime="2026-11-26T11:00" href="#">Book Skyline Seats</a>
           </div>
         </article>
         <article class="card">
@@ -306,7 +306,7 @@ footer .social a:hover{color:var(--gold);}
           <p>A private VIP table for your group of 5 to 8, booked as a whole table.</p>
           <div style="display:grid;gap:14px">
             <ul class="prices"><li><span>Adult (13+)</span><b>$89</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
-            <a class="book" data-id="839771" href="#">Book Family Table</a>
+            <a class="book" data-id="843743" data-covers="5" data-datetime="2026-11-26T11:00" href="#">Book Family Table</a>
           </div>
         </article>
       </div>
@@ -325,7 +325,7 @@ footer .social a:hover{color:var(--gold);}
           <p>The full Mesa de Gracias buffet at sunset. Seating is assigned by the restaurant in the dining room or on the heated terrace.</p>
           <div style="display:grid;gap:14px">
             <ul class="prices"><li><span>Adult (13+)</span><b>$109</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
-            <a class="book" data-id="839773" href="#">Book Golden Hour Dinner</a>
+            <a class="book" data-id="843747" data-covers="2" data-datetime="2026-11-26T17:00" href="#">Book Golden Hour Dinner</a>
           </div>
         </article>
         <article class="card featured">
@@ -334,7 +334,7 @@ footer .social a:hover{color:var(--gold);}
           <p>Seats on the Skyline Rail or Parapet, the rooftop's front row. Two guests per table.</p>
           <div style="display:grid;gap:14px">
             <ul class="prices"><li><span>Adult (13+)</span><b>$129</b></li><li><span>Child (5–12)</span><b>$59</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
-            <a class="book" data-id="839778" href="#">Book Skyline Seats</a>
+            <a class="book" data-id="843753" data-covers="2" data-datetime="2026-11-26T17:00" href="#">Book Skyline Seats</a>
           </div>
         </article>
         <article class="card">
@@ -343,7 +343,7 @@ footer .social a:hover{color:var(--gold);}
           <p>A private VIP table for your group of 5 to 8, booked as a whole table.</p>
           <div style="display:grid;gap:14px">
             <ul class="prices"><li><span>Adult (13+)</span><b>$109</b></li><li><span>Child (5–12)</span><b>$39</b></li><li class="small"><span>Under 5</span><span>Free</span></li></ul>
-            <a class="book" data-id="839780" href="#">Book Family Table</a>
+            <a class="book" data-id="843756" data-covers="5" data-datetime="2026-11-26T17:00" href="#">Book Family Table</a>
           </div>
         </article>
       </div>
@@ -433,7 +433,9 @@ footer .social a:hover{color:var(--gold);}
   var base = 'https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId=';
   var utm = '&utm_source=social&utm_medium=referral&utm_campaign=mesa-de-gracias';
   document.querySelectorAll('.book').forEach(function(a){
-    a.href = base + a.dataset.id + utm;
+    var covers = a.dataset.covers ? '&covers=' + a.dataset.covers : '';
+    var dt = a.dataset.datetime ? '&dateTime=' + a.dataset.datetime : '';
+    a.href = base + a.dataset.id + utm + covers + dt;
     a.target = '_blank'; a.rel = 'noopener';
   });
 
