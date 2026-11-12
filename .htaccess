@@ -1,0 +1,13 @@
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Redirect /index.html (site root) to /
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Redirect /any/path/index.html to /any/path/
+RewriteCond %{THE_REQUEST} \s/+(.+)/index\.html[\s?] [NC]
+RewriteRule ^(.+)/index\.html$ /$1/ [R=301,L]
+</IfModule>
