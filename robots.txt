@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /events/christmas-luxe/
+Disallow: /events/mesa-de-gracias/
