@@ -22,10 +22,10 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Thanksgiving Three-Course Dinner | Zenita Rooftop Restaurant &amp; Bar, San Antonio</title>
-<meta name="description" content="Thanksgiving Day at Zenita, the rooftop restaurant and bar atop the Aztec Hotel on the San Antonio River Walk. A Korean-inspired three-course dinner, $65 per person or $100 with wine pairing. Seatings 5:00 to 10:00 pm, Thursday, November 26, 2026. Book on OpenTable.">
+<title>Thanksgiving Three-Course Lunch &amp; Dinner | Zenita Rooftop Restaurant &amp; Bar, San Antonio</title>
+<meta name="description" content="Thanksgiving Day at Zenita, the rooftop restaurant and bar atop the Aztec Hotel on the San Antonio River Walk. A Korean-inspired three-course dinner, $65 per person or $100 with wine pairing. Lunch seatings 11:00 am to 2:00 pm and dinner seatings 5:00 to 10:00 pm, Thursday, November 26, 2026. Book on OpenTable.">
 <meta property="og:title" content="Thanksgiving on the Rooftop | Zenita">
-<meta property="og:description" content="Glimpse the Gilded Sky this Thanksgiving. A Korean-inspired three-course dinner above the River Walk. Thursday, November 26, 2026, seatings 5:00 to 10:00 pm. $65 per person, or $100 with wine pairing.">
+<meta property="og:description" content="Glimpse the Gilded Sky this Thanksgiving. A Korean-inspired three-course dinner above the River Walk. Thursday, November 26, 2026. Lunch 11:00 am to 2:00 pm, dinner 5:00 to 10:00 pm. $65 per person, or $100 with wine pairing.">
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -145,6 +145,19 @@ section{padding-block:72px}
 .ticks li{display:flex;gap:10px;align-items:baseline}
 .ticks li::before{content:"";flex:none;width:7px;height:7px;transform:rotate(45deg) translateY(-2px);background:var(--brass-deep)}
 .book-card .btn{display:block}
+/* Combined lunch + dinner booker */
+.booker{display:grid;gap:14px}
+.meal-toggle{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--palm);border-radius:2px;overflow:hidden}
+.meal-toggle input{position:absolute;opacity:0;pointer-events:none}
+.meal-toggle label{text-align:center;padding:12px 8px;cursor:pointer;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--palm);transition:background .15s,color .15s}
+.meal-toggle label small{display:block;font-weight:500;letter-spacing:.04em;text-transform:none;font-size:.78rem;margin-top:2px;opacity:.8}
+.meal-toggle input:checked+label{background:var(--palm);color:var(--brass)}
+.meal-toggle input:focus-visible+label{outline:3px solid var(--brass);outline-offset:-3px}
+.booker-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.booker-row label{display:grid;gap:4px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.booker-row select{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:10px 12px;appearance:auto}
+.booker-row select:focus-visible{outline:3px solid var(--brass);outline-offset:1px}
+.booker .btn{display:block}
 .book-card .fine-small{font-size:.85rem;text-align:center;color:var(--muted)}
 
 /* Evening timeline */
@@ -402,15 +415,17 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
   <div class="wrap">
     <div class="rule" aria-hidden="true"><i></i></div>
     <p class="promise">Glimpse the Gilded Sky this Thanksgiving</p>
-    <h1>Thanksgiving Three-Course Dinner</h1>
+    <h1>Thanksgiving Three-Course Lunch &amp; Dinner</h1>
     <p class="lede">Every tradition you love, lifted to the rooftop. Our chefs reimagine the classic holiday table with Korean flavor: kimchi in the stuffing, miso in the potatoes, pumpkin in a crackling brûlée. You bring the people. We handle the cooking, the serving and every last dish.</p>
     <div class="facts">
       <span>Thursday, November 26, 2026</span>
-      <span>Seatings 5:00 – 10:00 pm</span>
+      <span>Lunch 11:00 am – 2:00 pm</span>
+      <span>Dinner 5:00 – 10:00 pm</span>
       <span>$65 per person · $100 with wine pairing</span>
     </div>
     <div class="cta-row">
-      <a class="btn btn-brass plausible-event-name=reservation" href="https://www.opentable.com/booking/experiences-availability?rid=1500463&amp;restref=1500463&amp;experienceId=862126&amp;dateTime=2026-11-26T18:00&amp;ot_campaign=Thanksgiving2026&amp;utm_source=social&amp;utm_medium=referral&amp;utm_campaign=thanksgiving-2026" target="_blank" rel="noopener">Reserve your table</a>
+      <a class="btn btn-brass" href="#reserve" data-meal="lunch">Book lunch</a>
+      <a class="btn btn-brass" href="#reserve" data-meal="dinner">Book dinner</a>
       <a class="btn btn-ghost" href="#menu">See the menu</a>
     </div>
     <p class="countdown" id="countdown" hidden></p>
@@ -422,7 +437,7 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
     <div class="wrap">
       <div class="section-head center">
         <div class="eyebrow">Why spend Thanksgiving at Zenita</div>
-        <h2 id="why-h">A holiday dinner worth the climb</h2>
+        <h2 id="why-h">A holiday meal worth the climb</h2>
         <p>Zenita sits atop the historic Aztec Hotel on the San Antonio River Walk, a rooftop made for moments of energy and inspiration in the sky. This Thanksgiving, we're setting the table up here for you.</p>
       </div>
       <div class="why">
@@ -433,8 +448,8 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
         </article>
         <article>
           <span class="num">02</span>
-          <h3>Dinner with a skyline</h3>
-          <p>Trade the crowded dining room for an open sky over downtown San Antonio. Book an early seating to catch golden hour, or a later one when the city lights come up below you.</p>
+          <h3>A table with a skyline</h3>
+          <p>Trade the crowded dining room for an open sky over downtown San Antonio. Come for a sunlit Thanksgiving lunch, book an early dinner to catch golden hour, or a later one when the city lights come up below you.</p>
         </article>
         <article>
           <span class="num">03</span>
@@ -450,7 +465,7 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
       <div class="section-head">
         <div class="eyebrow">Korean-inspired · Three courses · Thanksgiving Day only</div>
         <h2 id="menu-h">The Thanksgiving menu</h2>
-        <p>A one-night-only menu from the Zenita kitchen. Add the wine pairing and we'll pour a glass chosen to match each course.</p>
+        <p>A one-day-only menu from the Zenita kitchen. Add the wine pairing and we'll pour a glass chosen to match each course.</p>
       </div>
       <div class="offer">
         <article class="menu-card" aria-label="Menu">
@@ -474,15 +489,15 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
             <p class="dish">Pumpkin Cheesecake Crème Brûlée</p>
             <p class="desc">Two holiday classics in one: creamy pumpkin cheesecake custard under a crackling caramelized-sugar top.</p>
           </div>
-          <p class="pairing-note"><b>Wine pairing, $100 per person:</b> the full three-course dinner with a wine poured for each course.</p>
+          <p class="pairing-note"><b>Wine pairing, $100 per person:</b> the full three-course meal with a wine poured for each course.</p>
         </article>
 
-        <aside class="book-card" aria-labelledby="book-h">
+        <aside class="book-card" id="reserve" aria-labelledby="book-h">
           <div class="eyebrow">Thanksgiving Day only</div>
           <h3 id="book-h">Reserve your table</h3>
-          <p>Seatings every 15 minutes from 5:00 to 10:00 pm on Thursday, November 26. Book for 1 to 20 guests, right up to your seating time.</p>
+          <p>Two ways to celebrate on Thursday, November 26: lunch seatings from 11:00 am to 2:00 pm, or dinner seatings from 5:00 to 10:00 pm, every 15 minutes. Book for 1 to 20 guests, right up to your seating time.</p>
           <ul class="prices">
-            <li><span>Three-course dinner<small>per person</small></span><b>$65</b></li>
+            <li><span>Three-course lunch or dinner<small>per person</small></span><b>$65</b></li>
             <li><span>With wine pairing<small>per person, three wines</small></span><b>$100</b></li>
           </ul>
           <ul class="ticks">
@@ -490,8 +505,21 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
             <li>Parties of 1 to 20, from a table for two to the whole family</li>
             <li>Note any allergies when you book and our kitchen will plan ahead</li>
           </ul>
-          <a class="btn btn-palm plausible-event-name=reservation" href="https://www.opentable.com/booking/experiences-availability?rid=1500463&amp;restref=1500463&amp;experienceId=862126&amp;dateTime=2026-11-26T18:00&amp;ot_campaign=Thanksgiving2026&amp;utm_source=social&amp;utm_medium=referral&amp;utm_campaign=thanksgiving-2026" target="_blank" rel="noopener">Book on OpenTable</a>
-          <p class="fine-small">Thanksgiving seatings are limited. Golden-hour times go first.</p>
+          <form class="booker" id="booker" aria-label="Choose lunch or dinner, time and party size">
+            <div class="meal-toggle" role="radiogroup" aria-label="Meal">
+              <input type="radio" name="meal" id="meal-lunch" value="lunch">
+              <label for="meal-lunch">Lunch<small>11:00 am – 2:00 pm</small></label>
+              <input type="radio" name="meal" id="meal-dinner" value="dinner" checked>
+              <label for="meal-dinner">Dinner<small>5:00 – 10:00 pm</small></label>
+            </div>
+            <div class="booker-row">
+              <label>Time<select id="bk-time" aria-label="Seating time"></select></label>
+              <label>Guests<select id="bk-party" aria-label="Party size"></select></label>
+            </div>
+            <a class="btn btn-palm plausible-event-name=reservation" id="bk-go" href="https://www.opentable.com/booking/experiences-availability?rid=1500463&amp;restref=1500463&amp;experienceId=862126&amp;dateTime=2026-11-26T18:00&amp;ot_campaign=Thanksgiving2026&amp;utm_source=social&amp;utm_medium=referral&amp;utm_campaign=thanksgiving-2026" target="_blank" rel="noopener">Reserve dinner on OpenTable</a>
+          </form>
+          <noscript><p class="fine-small"><a class="plausible-event-name=reservation" href="https://www.opentable.com/booking/experiences-availability?rid=1500463&amp;restref=1500463&amp;experienceId=863550&amp;dateTime=2026-11-26T12:00&amp;ot_campaign=Thanksgiving2026&amp;utm_source=social&amp;utm_medium=referral&amp;utm_campaign=thanksgiving-2026">Book lunch</a> · <a class="plausible-event-name=reservation" href="https://www.opentable.com/booking/experiences-availability?rid=1500463&amp;restref=1500463&amp;experienceId=862126&amp;dateTime=2026-11-26T18:00&amp;ot_campaign=Thanksgiving2026&amp;utm_source=social&amp;utm_medium=referral&amp;utm_campaign=thanksgiving-2026">Book dinner</a></p></noscript>
+          <p class="fine-small">Thanksgiving seatings are limited. Golden-hour dinner times go first.</p>
         </aside>
       </div>
     </div>
@@ -539,7 +567,7 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
           <div class="know-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="1.5"/><line x1="3.5" y1="9" x2="20.5" y2="9"/><line x1="8" y1="2.5" x2="8" y2="6.5"/><line x1="16" y1="2.5" x2="16" y2="6.5"/></svg></div>
           <div class="know-body">
             <h3>When is it offered?</h3>
-            <p>Thanksgiving Day only: Thursday, November 26, 2026, with seatings every 15 minutes from 5:00 to 10:00 pm.</p>
+            <p>Thanksgiving Day only: Thursday, November 26, 2026. Lunch seatings run every 15 minutes from 11:00 am to 2:00 pm, and dinner seatings from 5:00 to 10:00 pm. The same three-course menu and prices apply to both.</p>
           </div>
         </div>
         <div class="know-item">
@@ -567,7 +595,7 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
           <div class="know-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.3a1.5 1.5 0 1 1 1.3 2.2"/><path d="M12 4.8 4.3 10c-.7.5-.3 1.6.5 1.6H19.2c.8 0 1.2-1.1.5-1.6L12 4.8Z"/><line x1="7.3" y1="15.5" x2="16.7" y2="15.5"/></svg></div>
           <div class="know-body">
             <h3>What should I wear?</h3>
-            <p>Come as you are for the holiday. Late-November evenings on the rooftop can turn cool, so a light layer is a good idea.</p>
+            <p>Come as you are for the holiday. Late-November evenings on the rooftop can turn cool, so a light layer is a good idea for dinner.</p>
           </div>
         </div>
         <div class="know-item">
@@ -585,8 +613,11 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
     <div class="wrap">
       <div class="rule" aria-hidden="true"><i></i></div>
       <h2 id="close-h">Give thanks a little closer to the sky</h2>
-      <p>One night, one menu, a rooftop full of good company. Save your seat for Thanksgiving at Zenita before the best times are gone.</p>
-      <a class="btn btn-brass plausible-event-name=reservation" href="https://www.opentable.com/booking/experiences-availability?rid=1500463&amp;restref=1500463&amp;experienceId=862126&amp;dateTime=2026-11-26T18:00&amp;ot_campaign=Thanksgiving2026&amp;utm_source=social&amp;utm_medium=referral&amp;utm_campaign=thanksgiving-2026" target="_blank" rel="noopener">Reserve on OpenTable</a>
+      <p>One day, one menu, a rooftop full of good company. Save your seat for Thanksgiving at Zenita before the best times are gone.</p>
+      <div class="cta-row">
+        <a class="btn btn-brass" href="#reserve" data-meal="lunch">Book lunch</a>
+        <a class="btn btn-brass" href="#reserve" data-meal="dinner">Book dinner</a>
+      </div>
     </div>
   </section>
 </main>
@@ -649,8 +680,8 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
 
 
 <div class="mbar" role="region" aria-label="Quick booking">
-  <span>Thanksgiving at Zenita<br><b>Thu, Nov 26 · from $65</b></span>
-  <a class="btn btn-brass plausible-event-name=reservation" href="https://www.opentable.com/booking/experiences-availability?rid=1500463&amp;restref=1500463&amp;experienceId=862126&amp;dateTime=2026-11-26T18:00&amp;ot_campaign=Thanksgiving2026&amp;utm_source=social&amp;utm_medium=referral&amp;utm_campaign=thanksgiving-2026" target="_blank" rel="noopener">Book now</a>
+  <span>Thanksgiving at Zenita<br><b>Thu, Nov 26 · Lunch &amp; dinner · from $65</b></span>
+  <a class="btn btn-brass" href="#reserve">Book now</a>
 </div>
 
 <script>
@@ -670,6 +701,36 @@ navToggle.addEventListener('click',()=>{
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobileNav));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
 
+// Combined booker: one form for lunch (experience 863550) and dinner (experience 862126).
+(function(){
+  var MEALS={
+    lunch:{id:'863550',start:11*60,end:14*60,def:'12:00'},
+    dinner:{id:'862126',start:17*60,end:22*60,def:'18:00'}
+  };
+  var TRACK='&ot_campaign=Thanksgiving2026&utm_source=social&utm_medium=referral&utm_campaign=thanksgiving-2026';
+  var form=document.getElementById('booker'); if(!form) return;
+  var timeSel=document.getElementById('bk-time'), partySel=document.getElementById('bk-party'), go=document.getElementById('bk-go');
+  function pad(n){return (n<10?'0':'')+n}
+  function label(m){var h=Math.floor(m/60),mi=m%60,ap=h>=12?'pm':'am',hh=h%12||12;return hh+':'+pad(mi)+' '+ap}
+  partySel.innerHTML='';
+  for(var i=1;i<=20;i++){var o=document.createElement('option');o.value=i;o.textContent=i+(i===1?' guest':' guests');if(i===2)o.selected=true;partySel.appendChild(o)}
+  function meal(){return form.querySelector('input[name=meal]:checked').value}
+  function fillTimes(){
+    var m=MEALS[meal()];timeSel.innerHTML='';
+    for(var t=m.start;t<=m.end;t+=15){var v=pad(Math.floor(t/60))+':'+pad(t%60);var o=document.createElement('option');o.value=v;o.textContent=label(t);if(v===m.def)o.selected=true;timeSel.appendChild(o)}
+    update();
+  }
+  function update(){
+    var m=MEALS[meal()];
+    go.href='https://www.opentable.com/booking/experiences-availability?rid=1500463&restref=1500463&experienceId='+m.id+'&dateTime=2026-11-26T'+timeSel.value+'&covers='+partySel.value+TRACK;
+    go.textContent='Reserve '+meal()+' on OpenTable';
+  }
+  form.addEventListener('change',function(e){if(e.target.name==='meal')fillTimes();else update()});
+  form.addEventListener('submit',function(e){e.preventDefault();go.click()});
+  document.querySelectorAll('[data-meal]').forEach(function(a){a.addEventListener('click',function(){var r=document.getElementById('meal-'+a.getAttribute('data-meal'));if(r){r.checked=true;fillTimes()}})});
+  fillTimes();
+})();
+
 // Shows "Thanksgiving is in N days" / "tomorrow" / "tonight" and hides itself after the event.
 (function(){
   var el=document.getElementById('countdown'); if(!el) return;
@@ -680,6 +741,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
   var msg=null;
   if(diff>1 && diff<=21) msg='Thanksgiving is '+diff+' days away. Reserve while seatings last.';
   else if(diff===1) msg='Thanksgiving is tomorrow. Book tonight while seatings last.';
+  else if(diff===0 && now.getHours()<14) msg='Today! Lunch until 2 pm, dinner from 5 pm. Book right up to your seating time.';
   else if(diff===0 && now.getHours()<22) msg='Tonight! Book right up to your seating time.';
   if(msg){el.textContent=msg;el.hidden=false;}
 })();
