@@ -40,11 +40,13 @@
 /* Zenita brand: palette from the Aztec Hotel / Zenita brand presentation (Sun, River, Cypress, Ember, Sky, Night) + Zenita logo green.
    Brand typefaces are Flecha (display) and Compadre (caps). Web stand-ins: Cormorant Garamond and Josefin Sans; swap in licensed web fonts if you have them. */
 :root{
-  --sun:#D5BF88; --river:#ABC1D0; --cypress:#697F4A; --ember:#BD642A; --sky:#ABC1D0; --night:#212E40; --palm:#23411D;
-  --bg:#FAF6EC; --surface:#FFFFFF; --ink:#212E40; --muted:rgba(33,46,64,.65); --line:rgba(33,46,64,.14);
-  --display:"Cormorant Garamond", Georgia, serif;
-  --caps:"Jost", system-ui, sans-serif;
-  --body:"Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --navy:#212E40; --forest:#23411D; --sage:#697F4A; --sky:#ABC1D0; --rust:#BD642A; --rust-d:#914421; --gold:#D5BF88; --gold-l:#F5E2A9; --cream:#FAF6EC;
+  --fd:"Cormorant Garamond",Georgia,serif; --fb:"Jost",system-ui,sans-serif;
+  --sun:var(--gold); --river:var(--sky); --cypress:var(--sage); --ember:var(--rust); --night:var(--navy); --palm:var(--forest);
+  --bg:var(--cream); --surface:#FFFFFF; --ink:var(--navy); --muted:rgba(33,46,64,.65); --line:rgba(33,46,64,.14);
+  --display:var(--fd);
+  --caps:var(--fb);
+  --body:var(--fb);
 }
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:100px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
