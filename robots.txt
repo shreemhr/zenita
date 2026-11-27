@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /events/christmas-luxe/
 Disallow: /events/mesa-de-gracias/
+Disallow: /events/thanksgiving-dinner/
 
 Sitemap: https://zenitarooftop.com/sitemap.xml

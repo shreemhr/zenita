@@ -43,7 +43,7 @@
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
+html{scroll-behavior:smooth;scroll-padding-top:140px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--night);color:var(--ink);font:400 17px/1.6 Jost,"Futura","Century Gothic","Avenir Next",system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
 img,video{max-width:100%;display:block}
@@ -78,7 +78,7 @@ section{padding:72px 0}
   radial-gradient(1px 1px at 10% 55%,rgba(213,191,136,.25) 0%,transparent 100%),
   radial-gradient(1px 1px at 70% 85%,rgba(213,191,136,.3) 0%,transparent 100%)}
 @keyframes heroZoom{0%{transform:scale(1.06) translateY(0)}100%{transform:scale(1.13) translateY(-1.5%)}}
-.hero .copy{position:absolute;z-index:3;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:128px 0 34px}
+.hero .copy{position:absolute;z-index:3;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:168px 0 34px}
 .hero h1{font-size:clamp(3.2rem,10vw,7rem);text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .hero .when{font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:500;margin:12px 0 6px}
 .hero .sub{max-width:44ch;margin:0;color:#FAF6EC}
@@ -267,10 +267,10 @@ details p{color:var(--muted);margin:8px 0 2px}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 .mobile-nav{
-  display:none;position:fixed;top:80px;left:0;right:0;z-index:199;
+  display:none;position:fixed;top:120px;left:0;right:0;z-index:199;
   background:rgba(23,32,46,.98);backdrop-filter:blur(10px);
   border-top:1px solid rgba(213,191,136,.15);
-  max-height:calc(100vh - 80px);overflow-y:auto;
+  max-height:calc(100vh - 120px);overflow-y:auto;
 }
 .mobile-nav.open{display:block;}
 .mobile-nav a,.mobile-nav-label{
@@ -322,6 +322,14 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
 @media(max-width:540px){
   .footer-main{grid-template-columns:1fr;}
 }
+
+/* Holiday gift-card promo marquee */
+.promo-bar{position:fixed;top:80px;left:0;right:0;z-index:190;height:40px;overflow:hidden;background:var(--gold);}
+.promo-bar a{display:flex;align-items:center;height:100%;text-decoration:none;color:var(--navy);}
+.promo-track{display:flex;align-items:center;height:100%;white-space:nowrap;animation:promoScroll 26s linear infinite;will-change:transform;}
+.promo-track span{display:inline-flex;align-items:center;padding:0 2.2rem;font-family:var(--fb);font-weight:600;font-size:.8rem;letter-spacing:.04em;}
+@keyframes promoScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media(prefers-reduced-motion:reduce){.promo-track{animation:none;}}
 </style>
 </head>
 <body>
@@ -340,7 +348,6 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
           <a href="../../#private">Private Events</a>
           <div class="ddm-sep"></div>
           <a href="../nye/">Noche de Oro — New Year's Eve</a>
-          <a href="../thanksgiving-dinner/">Thanksgiving Three-Course Dinner</a>
           <a href="../christmas/">Christmas Prime Rib Experiences</a>
         </div>
       </div>
@@ -361,12 +368,25 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
   <span class="mobile-nav-label">Events</span>
   <a href="../../#private" class="mobile-nav-sub">Private Events</a>
   <a href="../nye/" class="mobile-nav-sub">Noche de Oro — New Year's Eve</a>
-  <a href="../thanksgiving-dinner/" class="mobile-nav-sub">Thanksgiving Three-Course Dinner</a>
   <a href="../christmas/" class="mobile-nav-sub">Christmas Prime Rib Experiences</a>
   <a href="../../#chef">Chef</a>
   <a href="../../#faq">FAQ</a>
 </div>
 
+<div class="promo-bar">
+  <a href="https://www.opentable.com/r/zenita-san-antonio#experiences" class="plausible-event-name=reservation" target="_blank" rel="noopener" aria-label="Book before December 15 and receive a $20 gift card — reserve on OpenTable">
+    <div class="promo-track" aria-hidden="true">
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+      <span>🎁 Book before December 15 &amp; receive a $20 Gift Card!</span>
+    </div>
+  </a>
+</div>
 <header class="hero" id="top">
   <img src="assets/hero.jpg" alt="The Aztec Hotel at dusk, with the glowing Zenita rooftop above the neon Aztec sign" fetchpriority="high">
   <div class="hero-glow" aria-hidden="true"></div>
@@ -631,7 +651,6 @@ p.foot-brand{font-size:.88rem;color:rgba(250,246,236,.6);line-height:1.82;max-wi
       <li><a href="https://aztechotelriverwalk.com/" target="_blank">Aztec Hotel</a></li>
       <li style="margin-top:.6rem;"><a href="#" style="color:var(--gold);">Holiday Events</a></li>
       <li><a href="../nye/">Noche de Oro — NYE</a></li>
-      <li><a href="../thanksgiving-dinner/">Thanksgiving Dinner</a></li>
       <li><a href="../christmas/">Christmas Prime Rib</a></li>
     </ul></div>
     <div class="foot-col"><h4>Hours</h4><ul>
